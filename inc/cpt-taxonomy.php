@@ -191,7 +191,7 @@ $args = array(
     'hierarchical'       => false,
     'menu_position'      => 7,
     'menu_icon'          => 'dashicons-heart',
-    'supports'           => array( 'title', 'thumbnail' ),
+    'supports'           => array( 'title', 'editor' ),
     'template'           => array( array( 'core/quote' ) ),
     'template_lock'      => 'all'
 );
