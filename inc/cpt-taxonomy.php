@@ -88,7 +88,7 @@ $args = array(
     'show_in_admin_bar'  => true,
     'show_in_rest'       => true,
     'query_var'          => true,
-    'rewrite'            => array( 'slug' => 'services' ),
+    'rewrite'            => array( 'slug' => 'service' ),
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => false,
