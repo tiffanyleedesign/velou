@@ -192,13 +192,13 @@ require get_template_directory() . '/inc/cpt-taxonomy.php';
 
 // Changes the Block Editor to Classic Editor for some Pages
 
-function velou_post_filter( $use_block_editor, $post ) {
-    $page_ids = array( 2 );
-    if ( in_array( $post->ID, $page_ids ) ) {
-        return false;
-    } else {
-        return $use_block_editor;
-    }
-}
-add_filter( 'use_block_editor_for_post', 'velou_post_filter', 10,  2 );
+// function velou_post_filter( $use_block_editor, $post ) {
+//     $page_ids = array( 2 );
+//     if ( in_array( $post->ID, $page_ids ) ) {
+//         return false;
+//     } else {
+//         return $use_block_editor;
+//     }
+// }
+// add_filter( 'use_block_editor_for_post', 'velou_post_filter', 10,  2 );
 
