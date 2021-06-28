@@ -24,35 +24,51 @@ get_header();
 			// get_template_part( 'template-parts/content', 'page' );
 		endwhile; // End of the loop.
 		?>
-		<section class="stylists">
-			<h2>Our Services</h2>
-
+		<section class="services">
+			
 			<?php 
-			// $args = array(
-			// 	'post-type'		=> 'velou-service',
-			// 	'post_per_page'	=> -1,
-			// 	);
+			$args = array(
+				'post_type'		=> 'velou-service',
+				'post_per_page'	=> -1,
+				);
 
-			// $query = new WP_Query ( $args );
+			$query = new WP_Query ( $args );
 
-			// if ( $query -> have_posts() ) {
-			// 	while($query -> have_posts()){
-			// 		$query -> the_post(); ?>					
-			 			<h2><?php //the_title(); ?></h2>
-						<?php //the_post_thumbnail('medium'); ?>
-					<?php		
-			// 		if(function_exists('get_field')){
-			// 			if(get_field('service_description')){
-			// 				?>
-						<p><?php //the_field('service_description'); ?></p>
-							<?php
-			// 			}
-			// 		}?>					
+			if ( $query -> have_posts() ) { ?>
+			<h2>Our Services</h2>
+			<?php
 
-				<?php
-				//}
-				//wp_reset_postdata();
-			//}
+ 			while ( $query->have_posts() ) : $query->the_post();
+				?> <h3><?php the_title();  ?></h3> <?php
+				 // the_post_thumbnail('medium');
+
+				if(function_exists('get_field')){
+					if(get_field('service_description')){?>
+						<p><?php the_field('service_description'); ?> </p>
+						<?php
+						}
+					}
+					if( have_rows('service') ): ?>
+ 
+						<table>
+					 
+						<?php while( have_rows('service') ): the_row(); ?>
+					 
+							<tr>
+							<td><?php the_sub_field('service_name'); ?></td>
+							<td><?php the_sub_field('price'); ?></td>
+							</tr>
+							
+						<?php endwhile; ?>
+					 
+						</table>
+					 
+					<?php endif;
+					
+
+			endwhile; 
+			wp_reset_postdata();
+			}
 			?>		
 		</section>
 	
