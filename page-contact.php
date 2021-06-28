@@ -50,6 +50,10 @@ get_header();
 						the_field('parking_info');
 					}
 
+					if (get_field('map')) {
+						the_field('map');
+					}
+
 					$location = get_field('map');
 					if( $location ): ?>
 						<div class="acf-map" data-zoom="14">
