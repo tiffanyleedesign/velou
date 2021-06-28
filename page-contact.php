@@ -48,7 +48,7 @@ get_header();
 
 					if (get_field('parking_info')) {
 						the_field('parking
-						-info');
+						_info');
 					}
 
 					$location = get_field('map');
