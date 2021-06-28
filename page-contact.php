@@ -46,11 +46,12 @@ get_header();
 						the_field('email');
 					}
 
-					if (get_field('parking-info')) {
-						the_field('parking-info');
+					if (get_field('parking_info')) {
+						the_field('parking
+						-info');
 					}
 
-					$location = get_field('location');
+					$location = get_field('map');
 					if( $location ): ?>
 						<div class="acf-map" data-zoom="16">
 							<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
