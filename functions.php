@@ -143,10 +143,6 @@ add_action( 'widgets_init', 'velou_widgets_init' );
  */
 function velou_scripts() {
 	wp_enqueue_style( 'fwd-googlefonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), null );
-<<<<<<< Updated upstream
-		
-=======
->>>>>>> Stashed changes
 	wp_enqueue_style( 'velou-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'velou-style', 'rtl', 'replace' );
 
