@@ -53,7 +53,7 @@
 
 						li {
 
-							@include column-width($i);
+							// @include column-width($i);
 
 							&:nth-child(#{$i}n) {
 								margin-right: 0;

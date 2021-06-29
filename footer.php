@@ -12,19 +12,47 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+	<h2 class="logo">Velou</h2>
+	<div class="footer-contact">
+			<?php 
+			if ( function_exists( 'get_field' ) ) {
+				if ( ! is_page('contact') ) {
+					if ( get_field('address', 37) ) {
+						echo '<div class="footer-contact-left">';
+							get_template_part( 'images/location');
+							the_field('address', 37);
+						echo '</div>';
+					}
+					if ( get_field('email', 37) ) {
+						echo '<div class="footer-contact-right">';
+							get_template_part( 'images/email');
+							echo '<p>'. get_field('email', 37) .'</p>';
+						echo '</div>';
+					}
+					if ( get_field('email', 37) ) {
+						echo '<div class="footer-contact-right">';
+							get_template_part( 'images/email');
+							echo '<p>'. get_field('phone', 37) .'</p>';
+						echo '</div>';
+					}
+				}
+			}
+					
+			?>
+		</div><!-- .footer-contact -->
+		<div class="footer-menus">
+			<nav id="footer-navigation" class="footer-navigation">
+			<?php wp_nav_menu(array('theme_location' => 'footer')); ?>
+			</nav>
+			<nav id="social-navigation" class="social-navigation">
+			<?php wp_nav_menu(array('theme_location' => 'social')); ?>	
+			</nav>
+				
+		</div><!-- .footer-menus -->
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'velou' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'velou' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'velou' ), 'velou', '<a href="https://velou.bcitwebdeveloper.ca/">FWD27</a>' );
-				?>
-		</div><!-- .site-info -->
+
+		<!-- My Privacy Page Link-->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
