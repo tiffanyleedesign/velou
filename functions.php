@@ -177,8 +177,14 @@ function velou_scripts() {
 			_S_VERSION,
 			true
 		);
-		
+	}
 
+	// Gallery filtering effect
+	if ( is_page(111)) {
+		wp_enqueue_script(
+			'gallery-filter',
+			get_template_directory_uri() .'/js/gallery-filter.js',
+		);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'velou_scripts' );

@@ -15,44 +15,62 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php
+	while ( have_posts() ) :
+		the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+		get_template_part( 'template-parts/content', 'page' );
 
-		endwhile; // End of the loop.?>
+	endwhile; // End of the loop.?>
 
-		<section class="gallery">
-		<?php 
-		$args = array(
-			'post_type'		=> 'velou-gallery',
-			'post_per_page'	=> -1,
-			'tax_query'		 => array(
-				array(
-					'taxonomy' 	=> 'velou-service-type',
-					'field'		=> 'slug',
-					'terms'		=> 'general'
-				)
+	<section class="gallery">
+	<?php 
+	$args = array(
+		'post_type'		=> 'velou-gallery',
+		'post_per_page'	=> -1,
+		'tax_query'		 => array(
+			array(
+				'taxonomy' 	=> 'velou-service-type',
+				'field'		=> 'slug',
+				'terms'		=> 'general'
 			)
-		);
+		)
+	);
 
-		$query = new WP_Query ( $args );
+	$query = new WP_Query ( $args );
 
-		if ( $query->have_posts() ){ ?>
-			<h2>Our Work Examples</h2>
-			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				<h2><?php the_title(); ?></h2>
-				<?php the_post_thumbnail('medium');
+	
+	if ( $query->have_posts() ){ ?>
+		<h2>Our Work Examples</h2>
 
-			endwhile;
-			wp_reset_postdata();
-		}
+		<!-- Sorting -->
+		<div id="btn-container">
+			<button class="filter-btn active" onclick="filterSelection('all')"> All</button>
+			<button class="filter-btn" onclick="filterSelection('haircuts')"> Cuts</button>
+			<button class="filter-btn" onclick="filterSelection('treatments')"> Treatments</button>
+			<button class="filter-btn" onclick="filterSelection('stylings')"> Styling</button>
+			<button class="filter-btn" onclick="filterSelection('special-package')"> Special</button>
+		</div>
 
-		?>
-	</main><!-- #main -->
+		<div className=""></div>
+		<?php while ( $query->have_posts() ) : $query->the_post();
+		
+			$terms = get_the_terms($post->ID, 'velou-service-type');?>
+			<div class="<?php foreach($terms as $term) {
+				echo ' ' . $term->slug;
+			}?> filter-div">
+
+			<?php the_post_thumbnail('medium');?>
+		</div>
+		<?php 
+		endwhile;
+		wp_reset_postdata();
+	}
+
+	?>
+</main><!-- #main -->
 
 <?php
 
