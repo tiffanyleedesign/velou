@@ -31,11 +31,25 @@ get_header();
 				<?php
 				}
 			}?>
+
+			<!-- Book Now CTA -->
+
+			<section class="cta-services">
+				<?php
+				$args = array( 'page_id' => 16 );
+
+				$query = new WP_Query( $args );
+
+				if ( $query->have_posts() ): 
+					while ( $query->have_posts() ) : $query->the_post();?>
+						<button> <a href="<?php the_permalink(); ?>"> Book Now </a> </button>
+					<?php endwhile;
+					wp_reset_postdata();
+				endif;?> 
+			</section>
 			
 			<section class="testimonial">
-			<?php 
-
-		
+			<?php 		
 				?>
 					<h3>Testimonial</h3>
 					<?php
@@ -59,10 +73,14 @@ get_header();
 							the_content();
 						endwhile; 
 						wp_reset_postdata();
-					endif;
-				
-			
+					endif;			
 			?>	
+			</section>
+
+			<section class="portfolio">
+
+			
+			
 			</section>
 
 				<?php 

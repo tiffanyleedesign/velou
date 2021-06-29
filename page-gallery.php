@@ -25,7 +25,7 @@ get_header();
 
 		endwhile; // End of the loop.?>
 
-		<section class="stylists">
+		<section class="gallery">
 		<?php 
 		$args = array(
 			'post_type'		=> 'velou-gallery',

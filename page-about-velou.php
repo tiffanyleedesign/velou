@@ -27,6 +27,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+
 		<section class="mission">
 			<?php 
 			if(function_exists('get_field')){
@@ -59,7 +60,7 @@ get_header();
 
 			if ( $query->have_posts() ){ ?>
 				<section class="home-slider">
-				<h2>Our Awarded Stylists</h2>
+				<h2>Our Award Winning Team</h2>
 					<!-- <div class="swiper-container">
 						<div class="swiper-wrapper">						 -->
 							<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -102,7 +103,7 @@ get_header();
 
 			if ( $query->have_posts() ): ?>
 				<section class="home-slider">
-					<h2>Testimonials</h2>
+					<h2>Customer Reviews</h2>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 						
@@ -125,27 +126,56 @@ get_header();
 
 		<section class="brand-logo">
 			
-			<h2>Our special Brands</h2><?php
-		$args = array(
-			'post_type' 	=> 'velou-brand-list',
-			'post_perr_page'=> -1,			
-		);
+			<h2>Brands We Use</h2><?php
+			$args = array(
+				'post_type' 	=> 'velou-brand-list',
+				'post_perr_page'=> -1,			
+			);
 
-		$query = new WP_Query ( $args );
+			$query = new WP_Query ( $args );
 
-		if ( $query -> have_posts() ) { 
-			while( $query -> have_posts()){
-				$query -> the_post();
-				the_post_thumbnail('medium'); 
-				
+			if ( $query -> have_posts() ) { 
+				while( $query -> have_posts()){
+					$query -> the_post();
+					the_post_thumbnail('medium'); 
+					
+				}
+			wp_reset_postdata();
 			}
-		wp_reset_postdata();
-		}
-		
-
-	?>
-
+		?>
 		</section>
+
+		<!-- Contact Us CTA -->
+
+	<section class="cta-services">
+		<?php
+		$args = array( 'page_id' => 37 );
+
+		$query = new WP_Query( $args );
+
+		if ( $query->have_posts() ): 
+			while ( $query->have_posts() ) : $query->the_post();?>
+				<button> <a href="<?php the_permalink(); ?>"> Contact Us </a> </button>
+			<?php endwhile;
+			wp_reset_postdata();
+		endif;?>
+	</section>
+
+	<!-- FAQ CTA -->
+
+	<section class="cta-services">
+		<?php
+		$args = array( 'page_id' => 12 );
+
+		$query = new WP_Query( $args );
+
+		if ( $query->have_posts() ): 
+			while ( $query->have_posts() ) : $query->the_post();?>
+				<button> <a href="<?php the_permalink(); ?>"> FAQ </a> </button>
+			<?php endwhile;
+			wp_reset_postdata();
+		endif;?> 
+	</section>
 
 	</main><!-- #main -->
 
