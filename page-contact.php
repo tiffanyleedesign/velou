@@ -30,25 +30,51 @@ get_header();
 				the_content();
 				if ( function_exists ('get_field')) {
 
-					if (get_field('address')) {
-						the_field('address');
+					if (get_field('address')) {?>
+					<p><?php the_field('address'); ?> </p>
+					<?php
 					}
 
-					if (get_field('hours')) {
-						the_field('hours');
+					if (get_field('hours')) {?>
+						<p><?php the_field('hours'); ?> </p>
+						<?php
+						
 					}
 
-					if (get_field('phone')) {
-						the_field('phone');
+					if (get_field('phone')) {?>
+						<p><?php the_field('phone'); ?> </p>
+						<?php
+						
 					}
 
-					if (get_field('email')) {
-						the_field('email');
+					if (get_field('email')) {?>
+						<p><?php the_field('email'); ?> </p>
+						<?php
+						
 					}
 
-					if (get_field('parking_info')) {
-						the_field('parking_info');
+					if (get_field('parking_info')) {?>
+						<p><?php the_field('parking_info'); ?> </p>
+						<?php
+						
 					}
+					?>
+					<!-- FAQ CTA -->
+
+					<section class="cta-services">
+						<?php
+						$args = array( 'page_id' => 12 );
+
+						$query = new WP_Query( $args );
+
+						if ( $query->have_posts() ): 
+							while ( $query->have_posts() ) : $query->the_post();?>
+								<button> <a href="<?php the_permalink(); ?>"> FAQ </a> </button>
+							<?php endwhile;
+							wp_reset_postdata();
+						endif;?> 
+					</section>
+					<?php
 
 					if (get_field('map')) {
 						the_field('map');

@@ -138,7 +138,7 @@ $args = array(
     'show_in_admin_bar'  => true,
     'show_in_rest'       => true,
     'query_var'          => true,
-    'rewrite'            => array( 'slug' => 'velou-gallery' ),
+    'rewrite'            => array( 'slug' => 'vel-gallery' ),
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => false,

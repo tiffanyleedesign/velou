@@ -45,7 +45,7 @@ get_header();
 	<section class="stylists">
 		<?php 
 		$args = array(
-			'post-type'		=> 'velou-stylist',
+			'post_type'		=> 'velou-stylist',
 			'post_per_page'	=> -1,
 			'tax_query'		 => array(
 				array(
@@ -60,7 +60,7 @@ get_header();
 
 		if ( $query->have_posts() ){ ?>
 			<section class="home-slider">
-				<h2>Our Awarded Stylists</h2>
+				<h2>Our Award Winning Team</h2>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">						
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
@@ -69,12 +69,13 @@ get_header();
 							<?php the_post_thumbnail('medium'); 		
 							if(function_exists('get_field')){
 								if(get_field('bio')){?>
-									<p><?php the_field('bio'); ?> </p> 									
-									<button><a href="<?php the_permalink(); ?>">View Profile!</a></button> 
+									<p><?php the_field('bio'); ?> </p> 		
 						
 								<?php
+								
 								}
-							}?>		
+							}?>	
+							<button><a href="<?php the_permalink(); ?>">View Profile!</a></button> 	
 						</div>		
 					<?php endwhile; ?>
 						</div>
@@ -118,7 +119,7 @@ get_header();
 
 		if ( $query->have_posts() ): ?>
 			<section class="home-slider">
-				<h2>Testimonials</h2>
+				<h2>Customer Reviews</h2>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 				
