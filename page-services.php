@@ -30,44 +30,53 @@ get_header();
 			$args = array(
 				'post_type'		=> 'velou-service',
 				'post_per_page'	=> -1,
+				'order'			=> "ASC",
 				);
 
 			$query = new WP_Query ( $args );
 
 			if ( $query -> have_posts() ) { ?>
-			<h2>Our Services</h2>
-			<?php
+				<h2>Our Services</h2>
+				<?php
 
- 			while ( $query->have_posts() ) : $query->the_post();
-				?> <h3><?php the_title();  ?></h3> <?php
-				 // the_post_thumbnail('medium');
+				while ( $query->have_posts() ) : $query->the_post();
+					?> 
+					<article class="accordion-menu">
 
-				if(function_exists('get_field')){
-					if(get_field('service_description')){?>
-						<p><?php the_field('service_description'); ?> </p>
-						<?php
-						}
-					}
-					if( have_rows('service') ): ?>
- 
-						<table>
-					 
-						<?php while( have_rows('service') ): the_row(); ?>
-					 
-							<tr>
-							<td><?php the_sub_field('service_name'); ?></td>
-							<td><?php the_sub_field('price'); ?></td>
-							</tr>
+						<div class="accordion-header"><h3><?php the_title();  ?></h3></div>
+						
+						<div class="accordion-content">
+							<?php
+							// the_post_thumbnail('medium');
+
+							if(function_exists('get_field')){
+								if(get_field('service_description')){?>
+									<p><?php the_field('service_description'); ?> </p>
+									<?php
+								}
+							}
+								
+							if( have_rows('service') ): ?>
+			
+								<table>
 							
-						<?php endwhile; ?>
-					 
-						</table>
-					 
-					<?php endif;
-					
-
-			endwhile; 
-			wp_reset_postdata();
+									<?php while( have_rows('service') ): the_row(); ?>
+								
+										<tr>
+											<td><?php the_sub_field('service_name'); ?></td>
+											<td><?php the_sub_field('price'); ?></td>
+										</tr>
+										
+									<?php endwhile; ?>
+							
+								</table>
+								
+							<?php endif;?>
+						</div>
+					</article>
+				<?php
+				endwhile; 
+				wp_reset_postdata();
 			}
 			?>		
 		</section>

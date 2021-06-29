@@ -1,0 +1,27 @@
+.accordion-menu {
+
+    .accordion-header {
+        // background-color: #eee;
+    }
+
+    .accordion-header h3:after {
+        content: "+"; //replace with icon
+    }
+
+    .accordion-header.active h3:after {
+        content: "-";  //replace with icon
+    }
+
+    .accordion-content {
+        overflow: hidden;
+        max-height: 0px;
+        transition: max-height 0.3s ease-in-out;
+        background-color: #eee;
+    }
+
+    .accordion-content.show {
+        transition: max-height 0.3s ease-in-out;
+        max-height: 600px;
+    }
+    
+}
