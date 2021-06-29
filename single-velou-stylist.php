@@ -65,6 +65,31 @@ get_header();
 			?>	
 			</section>
 
+			<!-- Portfolio Relationship Field and assign it to the Single Stylist Page -->
+			
+			<h2>Portfolio</h2>
+			<section class="stylist-portfolio">			
+			<!-- code from mindset -->
+				<?php
+				if ( function_exists( 'get_field' ) ) : 
+					$portfolio = get_field('portfolio');
+					if ($portfolio) :
+						foreach($portfolio as $post) :
+							setup_postdata($post); ?>
+							<article class="portfolio">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail(); ?>
+								</a>
+							</article>		
+						<?php 
+						endforeach;
+						wp_reset_postdata();
+					endif;
+				endif;
+				?>
+
+			</section>	
+
 				<?php 
 				the_post_navigation(
 					array(
