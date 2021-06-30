@@ -19,11 +19,9 @@ get_header();
 
 	<?php
 	while ( have_posts() ) :
-		the_post();
-
-		get_template_part( 'template-parts/content', 'page' );
-
-	endwhile; // End of the loop.?>
+		the_post();?>
+		
+		<h1><?php the_title(); ?></h1>
 
 	<section class="gallery">
 	<?php 
@@ -41,20 +39,28 @@ get_header();
 
 	$query = new WP_Query ( $args );
 
+	$types = get_terms(
+		array(
+			'taxonomy' 	=> 'velou-service-type'
+		)
+	);
 	
 	if ( $query->have_posts() ){ ?>
 		<h2>Our Work Examples</h2>
 
-		<!-- Sorting -->
+		<!-- Create Sorting Buttons -->
 		<div id="btn-container">
 			<button class="filter-btn active" onclick="filterSelection('all')"> All</button>
-			<button class="filter-btn" onclick="filterSelection('haircuts')"> Cuts</button>
-			<button class="filter-btn" onclick="filterSelection('treatments')"> Treatments</button>
-			<button class="filter-btn" onclick="filterSelection('stylings')"> Styling</button>
-			<button class="filter-btn" onclick="filterSelection('special-package')"> Special</button>
+			<?php foreach ( $types as $type ) {
+				?> <button class="filter-btn" onClick="filterSelection('<?php echo $type->slug ?>')">
+				<?php echo $type->slug; ?></button>
+				<?php
+			}
+			?>
 		</div>
 
-		<div className=""></div>
+		<!-- Create Gallery images with corresponding class name -->
+		<div class="filter-container">
 		<?php while ( $query->have_posts() ) : $query->the_post();
 		
 			$terms = get_the_terms($post->ID, 'velou-service-type');?>
@@ -63,13 +69,16 @@ get_header();
 			}?> filter-div">
 
 			<?php the_post_thumbnail('medium');?>
+			</div>
 		</div>
 		<?php 
 		endwhile;
 		wp_reset_postdata();
-	}
 
+	}
+	endwhile; // End of the loop.
 	?>
+
 </main><!-- #main -->
 
 <?php
