@@ -76,10 +76,6 @@ get_header();
 					</section>
 					<?php
 
-					if (get_field('map')) {
-						the_field('map');
-					}
-
 					$location = get_field('map');
 					if( $location ): ?>
 						<div class="acf-map" data-zoom="14">
