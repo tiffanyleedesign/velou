@@ -13,29 +13,17 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', get_post_type() );	
+			?>
 
-			get_template_part( 'template-parts/content', get_post_type() );	
+			<!-- Return to news list link -->
+	
+			<div class="return">
+				<a href="<?php echo get_permalink(106); ?>"> Book Now </a>
+			</div>	
 
-		endwhile; // End of the loop.
-		?>
-
-		<!-- Return to news list link -->
-		<section class="return">
-		<?php
-		$args = array( 'page_id' => 106 );
-
-		$query = new WP_Query( $args );
-
-		if ( $query->have_posts() ): 
-			while ( $query->have_posts() ) : $query->the_post();?>
-				 <a href="<?php the_permalink(); ?>"><h3> Return to news list</h3> </a> 
-			<?php endwhile;
-			wp_reset_postdata();
-		endif;?>
-			</section>
-
+<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->
 
 			<section class="home-blog">
 				<h2>You May Also Like</h2>	
@@ -71,9 +59,9 @@ get_header();
 				}
 				?>
 			</section>
+		<?php endwhile; // End of the loop.?>
 
 	</main><!-- #main -->
 
 <?php
-// get_sidebar();
 get_footer();

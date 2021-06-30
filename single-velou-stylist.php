@@ -13,10 +13,11 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );?>
+		while ( have_posts() ) : the_post();?>
+			<section class="hero">
+				<?php the_post_thumbnail('large');	?>
+			</section>
+		<h1><?php the_title() ?></h1>
 		
 
 			<section class="bio">
@@ -34,19 +35,9 @@ get_header();
 
 			<!-- Book Now CTA -->
 
-			<section class="cta-services">
-				<?php
-				$args = array( 'page_id' => 16 );
-
-				$query = new WP_Query( $args );
-
-				if ( $query->have_posts() ): 
-					while ( $query->have_posts() ) : $query->the_post();?>
-						<button> <a href="<?php the_permalink(); ?>"> Book Now </a> </button>
-					<?php endwhile;
-					wp_reset_postdata();
-				endif;?> 
-			</section>
+			<div class="cta-Book-now">
+				<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
+			</div>
 			
 			<section class="testimonial">
 			<?php 		
@@ -90,7 +81,7 @@ get_header();
 							setup_postdata($post); ?>
 							<article class="portfolio">
 								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail(); ?>
+									<?php the_post_thumbnail('medium'); ?>
 								</a>
 							</article>		
 						<?php 

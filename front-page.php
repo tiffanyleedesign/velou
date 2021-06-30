@@ -18,12 +18,13 @@ get_header();
 <main id="primary" class="site-main">
 
 	<?php
-	while ( have_posts() ) :
-		the_post();
-		get_template_part( 'template-parts/content', 'page' );	
-	endwhile; // End of the loop.
-	?>
+	while ( have_posts() ) : the_post();?>
 
+	<section class="hero">
+		<?php the_post_thumbnail('large');	?>
+	</section>		
+
+		
 	<!-- Our Mission Section -->
 	
 	<section class="mission">
@@ -64,8 +65,8 @@ get_header();
 				<div class="swiper-container">
 					<div class="swiper-wrapper">						
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-						<div class="swiper-slide">
-							<h2><?php the_title(); ?></h2>
+						<article class="swiper-slide">
+							<h3><?php the_title(); ?></h3>
 							<?php the_post_thumbnail('medium'); 		
 							if(function_exists('get_field')){
 								if(get_field('bio')){?>
@@ -75,8 +76,8 @@ get_header();
 								
 								}
 							}?>	
-							<button><a href="<?php the_permalink(); ?>">View Profile!</a></button> 	
-						</div>		
+							<a href="<?php the_permalink(); ?>">View Profile!</a>
+						</article>		
 					<?php endwhile; ?>
 						</div>
 						<div class="swiper-pagination"></div> 
@@ -91,20 +92,9 @@ get_header();
 
 	<!-- Services CTA -->
 
-	<section class="cta-services">
-		<?php
-		$args = array( 'page_id' => 106 );
-
-		$query = new WP_Query( $args );
-
-		if ( $query->have_posts() ): 
-			while ( $query->have_posts() ) : $query->the_post();?>
-				<button> <a href="<?php the_permalink(); ?>"> See Out Services </a> </button>
-			<?php endwhile;
-			wp_reset_postdata();
-		endif;?>
-	</section>
-
+	<div class="cta-services">
+		<a href="<?php echo get_permalink(106); ?>"> See Out Services </a>
+	</div>
 
 	<!-- Testimonial Slider -->
 
@@ -161,6 +151,8 @@ get_header();
 		
 
 	?></section>
+	<?php
+	endwhile; // End of the loop.?>
 
 </main><!-- #main -->
 

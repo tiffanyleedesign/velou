@@ -37,12 +37,7 @@
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
-			endif;
-			$velou_description = get_bloginfo( 'description', 'display' );
-			if ( $velou_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $velou_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			endif;?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -56,4 +51,10 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<!-- Book Now CTA -->
+
+		<div class="cta-Book-now">
+			<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
+		</div>
 	</header><!-- #masthead -->

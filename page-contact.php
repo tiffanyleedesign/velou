@@ -31,51 +31,46 @@ get_header();
 				if ( function_exists ('get_field')) {
 
 					if (get_field('address')) {?>
+					<div class="address">
 					<p><?php the_field('address'); ?> </p>
+					</div>
 					<?php
 					}
 
 					if (get_field('hours')) {?>
+					<div class="hours">
 						<p><?php the_field('hours'); ?> </p>
-						<?php
+					</div><?php
 						
 					}
 
 					if (get_field('phone')) {?>
+					<div class="phone">
 						<p><?php the_field('phone'); ?> </p>
-						<?php
+					</div><?php
 						
 					}
 
 					if (get_field('email')) {?>
+					<div class="email">
 						<p><?php the_field('email'); ?> </p>
-						<?php
+					</div><?php
 						
 					}
 
 					if (get_field('parking_info')) {?>
+					<div class="parking">
 						<p><?php the_field('parking_info'); ?> </p>
-						<?php
-						
+					</div><?php						
 					}
 					?>
+					
 					<!-- FAQ CTA -->
+					<div class="cta-FAQ">
+						<a href="<?php echo get_permalink(12); ?>"> FAQ  </a>
+					</div>
 
-					<section class="cta-services">
-						<?php
-						$args = array( 'page_id' => 12 );
-
-						$query = new WP_Query( $args );
-
-						if ( $query->have_posts() ): 
-							while ( $query->have_posts() ) : $query->the_post();?>
-								<button> <a href="<?php the_permalink(); ?>"> FAQ </a> </button>
-							<?php endwhile;
-							wp_reset_postdata();
-						endif;?> 
-					</section>
 					<?php
-
 					$location = get_field('map');
 					if( $location ): ?>
 						<div class="acf-map" data-zoom="14">
@@ -83,7 +78,6 @@ get_header();
 						</div>
 					<?php endif;										
 				}
-
 				?>
 			</div>
 			</article>
