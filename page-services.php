@@ -48,30 +48,42 @@ get_header();
 						<div class="accordion-content">
 							<?php
 							// the_post_thumbnail('medium');
-
+							
 							if(function_exists('get_field')){
+								$image = get_field('thumbnail-image');
+									if( !empty( $image ) ): ?>
+    								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<?php endif;
+								
+								$image = get_field('image');
+								$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+								if( $image ) {
+									echo wp_get_attachment_image( $image, $size );
+								}
+
 								if(get_field('service_description')){?>
 									<p><?php the_field('service_description'); ?> </p>
 									<?php
 								}
-							}
-								
-							if( have_rows('service') ): ?>
+								if( have_rows('service') ): ?>
 			
-								<table>
-							
-									<?php while( have_rows('service') ): the_row(); ?>
+									<table>
 								
-										<tr>
-											<td><?php the_sub_field('service_name'); ?></td>
-											<td><?php the_sub_field('price'); ?></td>
-										</tr>
-										
-									<?php endwhile; ?>
-							
-								</table>
+										<?php while( have_rows('service') ): the_row(); ?>
+									
+											<tr>
+												<td><?php the_sub_field('service_name'); ?></td>
+												<td><?php the_sub_field('price'); ?></td>
+											</tr>
+											
+										<?php endwhile; ?>
 								
-							<?php endif;?>
+									</table>
+									
+								<?php endif;
+							}?>
+								
+							
 						</div>
 					</article>
 				<?php

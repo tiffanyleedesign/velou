@@ -52,7 +52,7 @@
 		<div class="site-info">
 
 		<!-- My Privacy Page Link-->
-
+		<p>&copy; 2021 Velou Hair Boutique.</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
