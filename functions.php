@@ -253,3 +253,17 @@ function my_acf_google_map_api( $api ){
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+function velou_excerpt_length(){
+	return 50;
+}
+
+add_filter('excerpt_length', 'velou_excerpt_length', 999 );
+
+// Edit the Read More link
+
+function velou_excerpt_more( $more ){
+	$more = '.. <a class="read-more" href="'.get_permalink() .'">View More</a>';
+	return $more;
+}
+add_filter('excerpt_more', 'velou_excerpt_more');
