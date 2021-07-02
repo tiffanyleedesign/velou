@@ -17,22 +17,22 @@ get_header();
 			<section class="hero">
 				<?php the_post_thumbnail('large');	?>
 			</section>
-		<h1><?php the_title() ?></h1>
+			<h1><?php the_title() ?></h1>
 		
 
 			<section class="bio">
-			<?php 
-			if(function_exists('get_field')){
-				if(get_field('bio')){?>
-				<p><?php the_field('bio'); ?> </p>
-				<?php
-				}
-				if(get_field('qualifications')){?>					
-				<p><?php the_field('qualifications'); ?> </p>
-				<?php
-				}
-			}?>
-
+				<?php 
+				if(function_exists('get_field')){
+					if(get_field('bio')){?>
+					<p><?php the_field('bio'); ?> </p>
+					<?php
+					}
+					if(get_field('qualifications')){?>					
+					<p><?php the_field('qualifications'); ?> </p>
+					<?php
+					}
+				}?>
+			</section>
 			<!-- Book Now CTA -->
 
 			<div class="cta-Book-now">
@@ -40,9 +40,7 @@ get_header();
 			</div>
 			
 			<section class="testimonial">
-			<?php 		
-				?>
-					<h3>Testimonial</h3>
+				<h3>Testimonial</h3>
 					<?php
 				
 					$args = array(
@@ -65,14 +63,13 @@ get_header();
 						endwhile; 
 						wp_reset_postdata();
 					endif;			
-			?>	
+				?>	
 			</section>
 
 			<!-- Portfolio Relationship Field and assign it to the Single Stylist Page -->
 			
 			<h2>Portfolio</h2>
 			<section class="stylist-portfolio">			
-			<!-- code from mindset -->
 				<?php
 				if ( function_exists( 'get_field' ) ) : 
 					$portfolio = get_field('portfolio');
@@ -90,17 +87,16 @@ get_header();
 					endif;
 				endif;
 				?>
-
 			</section>	
 
-				<?php 
-				the_post_navigation(
-					array(
-						'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-						'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-					)
-				);
-				
+			<?php 
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
+			
 			
 			
 		endwhile; // End of the loop.?>

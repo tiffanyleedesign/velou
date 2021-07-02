@@ -22,6 +22,7 @@ get_header();
 			<section class="hero">
 				<?php the_post_thumbnail('large');	?>
 			</section>	
+
 			<h1><?php the_title() ?></h1>
 
 			<section class="services">
@@ -46,12 +47,11 @@ get_header();
 							
 							<div class="accordion-content">
 								<?php
-								// the_post_thumbnail('medium');
-								
+																
 								if(function_exists('get_field')){
 									
 									$image = get_field('image');
-									$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+									$size = 'medium'; 
 									if( $image ) {
 										echo wp_get_attachment_image( $image, $size );
 									}
@@ -84,7 +84,7 @@ get_header();
 								
 							</div>
 						</article>
-					<?php
+						<?php
 					endwhile; 
 					wp_reset_postdata();
 				}

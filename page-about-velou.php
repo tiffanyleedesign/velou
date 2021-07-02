@@ -25,15 +25,15 @@ get_header();
 	
 
 			<section class="mission">
-			<h1><?php the_title() ?></h1>
+				<h1><?php the_title() ?></h1>
 				<?php 
 				if(function_exists('get_field')){
 					if(get_field('company_mission')){?>
-					<p><?php the_field('company_mission'); ?> </p>
+						<p><?php the_field('company_mission'); ?> </p>
 					<?php
 					}
 					if(get_field('stylist_section_overview')){?>					
-					<p><?php the_field('stylist_section_overview'); ?> </p>
+						<p><?php the_field('stylist_section_overview'); ?> </p>
 					<?php
 					}
 				}?>
@@ -45,9 +45,7 @@ get_header();
 					'post_type'		=> 'velou-stylist',
 					'post_per_page'	=> -1,
 				);
-
 				$query = new WP_Query ( $args );
-
 				if ( $query->have_posts() ){ ?>
 					<section class="home-slider">
 						<h2>Our Award Winning Team</h2>										
@@ -57,8 +55,7 @@ get_header();
 							if(function_exists('get_field')){
 								if(get_field('bio')){?>
 									<p><?php the_field('bio'); ?> </p> 
-									<a href="<?php the_permalink(); ?>">View Profile!</a> 
-						
+									<a href="<?php the_permalink(); ?>">View Profile!</a> 						
 								<?php
 								}
 							}?>				
@@ -66,8 +63,7 @@ get_header();
 					</section>
 					<?php
 					wp_reset_postdata();
-					}
-				?>		
+				}?>						
 			</section>
 
 			<!-- Testimonial Slider -->
@@ -98,12 +94,10 @@ get_header();
 							</div>
 					</section>
 					<?php wp_reset_postdata();
-				endif;
-			?>
+				endif;?>			
 			</section>	
 
-			<section class="brand-logo">
-				
+			<section class="brand-logo">				
 				<h2>Brands We Use</h2><?php
 				$args = array(
 					'post_type' 	=> 'velou-brand-list',
@@ -114,9 +108,11 @@ get_header();
 
 				if ( $query -> have_posts() ) { 
 					while( $query -> have_posts()){
-						$query -> the_post();
-						the_post_thumbnail('medium');					
-					}
+						$query -> the_post();?>
+						<div class="brand-logo">
+							<?php the_post_thumbnail('medium');	?>
+						</div>				
+					<?php }
 				wp_reset_postdata();
 				}
 			?>
@@ -133,7 +129,7 @@ get_header();
 				<a href="<?php echo get_permalink(12); ?>"> FAQ  </a>
 			</div>
 
-	<?php endwhile; // End of the loop.?>
+		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
 <?php
 get_footer();

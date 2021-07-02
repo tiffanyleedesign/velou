@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 	<main id="primary" class="site-main">
 
 		<?php
@@ -23,7 +22,7 @@ get_header();
 				<a href="<?php echo get_permalink(106); ?>"> Book Now </a>
 			</div>	
 
-<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->
+			<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->
 
 			<section class="home-blog">
 				<h2>You May Also Like</h2>	
@@ -36,8 +35,7 @@ get_header();
 				$blog_query = new WP_Query( $args );
 				if( $blog_query -> have_posts()){?>
 					
-					<section class="you-may-like">
-					
+					<section class="you-may-like">					
 						<?php
 						while($blog_query -> have_posts()){
 							$blog_query -> the_post(); ?>
@@ -48,13 +46,10 @@ get_header();
 									<h3><?php the_title(); ?></h3>
 								</a>
 							</article>
-
 						<?php
 						}
-						wp_reset_postdata(); ?>
-				
+						wp_reset_postdata(); ?>				
 					</section>
-
 					<?php
 				}
 				?>
