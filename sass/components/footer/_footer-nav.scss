@@ -1,0 +1,40 @@
+.menu-social-menu-container{
+    ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0rem;
+        li{
+            margin-right: 1rem;
+            svg{
+              
+                path{
+                    fill: $color__background-screen;
+                }
+            }
+        }
+    }
+}
+
+.menu-footer-menu-container{
+    ul{
+        list-style: none;
+        text-decoration: underline;
+        padding: 0;
+        margin: 4rem 0 2rem;
+        li{
+            vertical-align: text-top;
+            margin-right: .5rem;
+            
+        }
+        a{
+            color: $color__text-main;
+        }
+    }
+}
+@media screen and (min-width: $tablet){
+    svg{
+    width: 3rem;
+    height: 3rem;
+}
+}
