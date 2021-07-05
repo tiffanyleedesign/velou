@@ -75,7 +75,9 @@ get_header();
 									
 									}
 								}?>	
-								<a href="<?php the_permalink(); ?>">View Profile!</a>
+								<div class="cta-hollow">
+									<a href="<?php the_permalink(); ?>">View Profile</a>
+								</div>
 							</article>		
 						<?php endwhile; ?>
 							</div>
@@ -90,9 +92,8 @@ get_header();
 		</section> 
 
 		<!-- Services CTA -->
-
-		<div class="cta-services">
-			<a href="<?php echo get_permalink(106); ?>"> See Our Services </a>
+		<div class="cta-solid">
+			<a href="<?php echo get_permalink(106); ?>">Our Services</a>
 		</div>
 
 		<!-- Testimonial Slider -->

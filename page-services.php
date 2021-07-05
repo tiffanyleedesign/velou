@@ -91,17 +91,16 @@ get_header();
 				?>		
 			</section>
 
-			<!-- FAQ CTA -->
-
-			<div class="cta-FAQ">
-				<a href="<?php echo get_permalink(12); ?>"> FAQ  </a>
-			</div>
-
 			<!-- Book Now CTA -->
-
-			<div class="cta-Book-now">
-				<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
+			<div class="cta-solid">
+				<a href="<?php echo get_permalink(294); ?>">Book Now</a>
 			</div>
+			
+			<!-- FAQ CTA -->
+			<div class="cta-hollow">
+				<a href="<?php echo get_permalink(12); ?>">FAQ</a>
+			</div>
+
 		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
 

@@ -19,7 +19,7 @@ get_header();
 			<!-- Return to news list link -->
 	
 			<div class="return">
-				<a href="<?php echo get_permalink(106); ?>"> Book Now </a>
+				<a href="<?php echo get_permalink(106); ?>">Book Now</a>
 			</div>	
 
 			<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->

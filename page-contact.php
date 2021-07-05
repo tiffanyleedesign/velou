@@ -64,8 +64,8 @@ get_header();
 						?>
 						
 						<!-- FAQ CTA -->
-						<div class="cta-FAQ">
-							<a href="<?php echo get_permalink(12); ?>"> FAQ  </a>
+						<div class="cta-hollow">
+							<a href="<?php echo get_permalink(12); ?>">FAQ</a>
 						</div>
 
 						<?php
@@ -74,7 +74,7 @@ get_header();
 							<div class="acf-map" data-zoom="14">
 								<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
 							</div>
-					<?php endif;										
+					<?php endif;								 		
 					}
 					?>
 				</div>

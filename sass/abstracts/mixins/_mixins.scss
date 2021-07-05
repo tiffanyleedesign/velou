@@ -1,11 +1,32 @@
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Column width with margin
 // @mixin column-width($numberColumns: 3) {
 // 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 // }
+
+@mixin cta {
+  text-align: center;
+  font-family: $font__heading;
+  letter-spacing: 2px;
+  padding: 0.7rem 1rem;
+  width: 10rem;
+  font-size: 1rem;
+
+  a {
+    font-family: $font__heading;
+  }
+}
+
+// Media Queries
+// $tablet, $desktop, $desktopWide (_structure.scss)
+@mixin mq($w) {
+  @media (min-width: em($w)) {
+    @content;
+  }
+}

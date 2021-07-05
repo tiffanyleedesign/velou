@@ -21,24 +21,41 @@ a {
   }
 }
 
-// .solid-btn-green .hollow-btn-green
-
-.cta-Book-now {
+// Book Now button on every page
+.cta-book-now {
+  position: fixed;
+  text-align: center;
   background-color: $color__button2;
   font-family: $font__heading;
   font-size: 1.2rem;
   width: 120px;
   height: 2.2rem;
-  text-align: center;
-
   border-radius: 10px 10px 0 0;
-  position: fixed;
   bottom: 50px;
   right: -45px;
   transform: rotate(270deg);
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   z-index: 99;
+
+  a {
+    color: $color__button-text2;
+  }
+}
+
+.cta-hollow {
+  @include cta;
+  color: $color__button-text1;
+  border: 2px solid $color__button2;
+  a {
+    color: $color__button-text1;
+  }
+}
+
+.cta-solid {
+  @include cta;
+  background-color: $color__button2;
+
   a {
     color: $color__button-text2;
   }

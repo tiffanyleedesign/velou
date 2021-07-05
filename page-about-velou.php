@@ -55,7 +55,7 @@ get_header();
 							if(function_exists('get_field')){
 								if(get_field('bio')){?>
 									<p><?php the_field('bio'); ?> </p> 
-									<a href="<?php the_permalink(); ?>">View Profile!</a> 						
+									<a href="<?php the_permalink(); ?>">View Profile</a>						
 								<?php
 								}
 							}?>				
@@ -120,13 +120,13 @@ get_header();
 
 			<!-- Contact Us CTA -->
 
-			<div class="cta-contact">
-				<a href="<?php echo get_permalink(37); ?>"> Contact Us </a>
+			<div class="cta-solid cta-contact">
+				<a href="<?php echo get_permalink(37); ?>">Contact Us</a>
 			</div>
 
 			<!-- FAQ CTA -->
-			<div class="cta-FAQ">
-				<a href="<?php echo get_permalink(12); ?>"> FAQ  </a>
+			<div class="cta-hollow cta-FAQ">
+				<a href="<?php echo get_permalink(12); ?>">FAQ</a>
 			</div>
 
 		<?php endwhile; // End of the loop.?>

@@ -34,11 +34,10 @@ get_header();
 				}?>
 			</section>
 			<!-- Book Now CTA -->
-
-			<div class="cta-Book-now">
-				<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
+			<div class="cta-solid">
+				<a href="<?php echo get_permalink(294); ?>">Book Now</a>
 			</div>
-			
+
 			<section class="testimonial">
 				<h3>Testimonial</h3>
 					<?php
