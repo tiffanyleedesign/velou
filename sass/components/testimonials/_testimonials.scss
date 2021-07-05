@@ -1,0 +1,16 @@
+.testimonial {
+    // Customer Reviews
+    h2 {
+        font-family: var(--$font__heading);
+    }
+
+    p { 
+        
+        font-style: italic;
+    }
+
+    .wp-block-quote {
+        border-left: none;
+    }
+
+}
