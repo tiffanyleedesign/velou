@@ -2,20 +2,36 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: $font__heading;
+}
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+// page-gallery.php filter buttons
+.filter-btn {
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  border: 1px solid $color__button2;
+  color: $color__button-text1;
+  background-color: transparent;
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color__button3;
+    color: $color__button-text2;
+    border: 1px solid $color__button3;
+  }
+}
+
+.filter-btn.active {
+  background-color: $color__button2;
+  color: $color__button-text2;
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $color__button2;
+  }
 }

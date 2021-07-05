@@ -41,22 +41,45 @@ a {
   a {
     color: $color__button-text2;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include cta-hover;
+  }
 }
 
 .cta-hollow {
   @include cta;
   color: $color__button-text1;
   border: 2px solid $color__button2;
+
   a {
     color: $color__button-text1;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include cta-hover;
   }
 }
 
 .cta-solid {
   @include cta;
   background-color: $color__button2;
+  padding: 0.8rem 1rem;
 
   a {
     color: $color__button-text2;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color__button3;
+    a {
+      color: $color__text-main;
+    }
   }
 }

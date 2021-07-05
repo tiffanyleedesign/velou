@@ -33,8 +33,6 @@
 
 .filter-div {
   float: left;
-  background-color: darkblue;
-  color: white;
   text-align: center;
   margin: 2rem 0;
   display: none;
@@ -49,28 +47,6 @@
 .filter-div img {
   width: 100%;
   transition: 0.5s all ease-in-out;
-}
-
-.filter-btn {
-  border: none;
-  outline: none;
-  padding: 0.8rem 1rem;
-  margin-bottom: 0.2rem;
-  background-color: #ddd;
-  cursor: pointer;
-}
-
-.filter-btn:hover {
-  background-color: blue;
-}
-
-.filter-btn:focus {
-  border: 2px dotted blue;
-}
-
-.filter-btn.active {
-  background-color: red;
-  color: grey;
 }
 
 figcaption {

@@ -5,11 +5,7 @@
   margin-right: auto;
 }
 
-// Column width with margin
-// @mixin column-width($numberColumns: 3) {
-// 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
-// }
-
+// CTA style
 @mixin cta {
   text-align: center;
   font-family: $font__heading;
@@ -17,9 +13,20 @@
   padding: 0.7rem 1rem;
   width: 10rem;
   font-size: 1rem;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
 
   a {
     font-family: $font__heading;
+  }
+}
+
+// CTA hover (Book Now)
+@mixin cta-hover {
+  border: 2px solid $color__button1;
+  background-color: $color__button1;
+  a {
+    color: $color__button-text2;
   }
 }
 
