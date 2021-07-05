@@ -1,0 +1,51 @@
+.site-header {
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 9;
+    
+
+    .site-branding {
+        order: 2;
+        width: 50%;
+
+        .custom-logo-link {
+            margin: 1.75rem auto 1.5rem;
+            display: block;
+            position: relative;
+            z-index: 10;
+            img {
+                width: 4rem;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+
+    #site-navigation {
+        width: 25%;
+        
+        
+        .menu-toggle {
+            background-color: transparent;
+            border: none;
+            margin: 1rem;
+            padding: .8rem .8rem .5rem;
+            position: relative;
+            z-index: 10;
+
+            svg {
+                line {
+                    fill: $color__text-input;
+                }
+               
+            }
+        }
+    }
+}

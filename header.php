@@ -41,7 +41,18 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'velou' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="screen-reader-text">Primary Menu</span>
+			
+				<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line x1="0.5" y1="0.5" x2="25.5" y2="0.5" stroke="#4A4745
+" stroke-linecap="round"/>
+					<line x1="0.5" y1="8.5" x2="25.5" y2="8.5" stroke="#4A4745
+" stroke-linecap="round"/>
+					<line x1="0.5" y1="16.5" x2="25.5" y2="16.5" stroke="#4A4745
+" stroke-linecap="round"/>
+				</svg>
+			</button>
+			
 			<?php
 			wp_nav_menu(
 				array(
@@ -54,7 +65,7 @@
 
 		<!-- Book Now CTA -->
 
-		<div class="cta-Book-now">
+		<div class="cta-book-now">
 			<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
 		</div>
 	</header><!-- #masthead -->
