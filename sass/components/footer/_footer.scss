@@ -28,8 +28,13 @@ footer{
         ul{
             justify-content: flex-end;
         }
-    } 
-       
+    }        
+
+    @media screen and (min-width: $desktop){
+        .footer-info{
+            margin: 2rem 10rem;
+        }
+    }
 }
 
 
