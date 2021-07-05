@@ -41,8 +41,6 @@ get_header();
 		</section>
 
 		<!-- Stylists Slider -->
-
-		<section class="stylists">
 			<?php 
 			$args = array(
 				'post_type'		=> 'velou-stylist',
@@ -59,7 +57,7 @@ get_header();
 			$query = new WP_Query ( $args );
 
 			if ( $query->have_posts() ){ ?>
-				<section class="home-slider">
+				<section class="home-slider stylist">
 					<h2>Our Award Winning Team</h2>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">						
@@ -89,7 +87,7 @@ get_header();
 				<?php
 				wp_reset_postdata();
 			}?>				
-		</section> 
+
 
 		<!-- Services CTA -->
 		<div class="cta-solid">
@@ -98,8 +96,7 @@ get_header();
 
 		<!-- Testimonial Slider -->
 
-		<section class="testimonial">
-			<?php
+		<?php
 			$args = array(
 				'post_type'      => 'velou-testimonial',
 				'posts_per_page' => -1
@@ -108,26 +105,33 @@ get_header();
 			$query = new WP_Query( $args );
 
 			if ( $query->have_posts() ): ?>
-				<section class="home-slider">
+				<section class="home-slider testimonial">
+					
+				
 					<h2>Customer Reviews</h2>
+					
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-					
+
 							<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+						
 								<div class="swiper-slide">
 									<?php the_content(); ?>
 								</div>
-						
+			
 							<?php endwhile; ?>
 						</div>
+
 						<div class="swiper-pagination"></div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
+				
+
 				</section>
 				<?php wp_reset_postdata();
 			endif;?>
-		</section>
+
 
 		<!-- Brands Logo Section  -->
 

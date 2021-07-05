@@ -1,16 +1,87 @@
-.testimonial {
-    // Customer Reviews
-    h2 {
-        font-family: var(--$font__heading);
-    }
+// .box {
+//     position:relative;
 
-    p { 
+//     // A box behind the actual quote
+//     ::before {
+//         content: " ";
+//         width: 50%;
+//         height: 300px;
+//         display:block;
+//         position: absolute;
+//         z-index: -1;
+//         background-color: $color__background-accent1;
+
+//     }
+
+//         h2 {
+//             font-family: $font__heading;
+//             margin-bottom: 2rem;
+//             z-index: 2;
+//             position: absolute;
+//             margin-left: 2rem;
+//             background-color: transparent;
+//             background-color: $color__background-accent1;
+//         }
         
-        font-style: italic;
+//         .swiper-container {
+//             top: 4rem;
+//         }
+
+//         .wp-block-quote {
+//             border-left: none;
+//         }
+
+
+//         blockquote .wp-block-quote {
+//             margin:2rem;
+//             padding-top: 5rem;
+
+//             background-color: $color__background-accent4;
+//             p { 
+//                 color: $color__text-input;
+//                 font-style: italic;
+//                 padding-top: -5rem;
+//                 position: absolute;
+//                 z-index: 100;
+//                 left: 10rem;
+
+//             }
+
+//             cite {
+                
+//                 left: 5rem;
+//                 color: $color__text-input;
+
+
+//             }
+//         }
+    
+// }
+
+.testimonial {
+    position: relative;
+
+    ::before {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: gray;
     }
+        
+    blockquote {
+        width: 50%;
+        background-color: lightgrey;
+        position: relative;
+        z-index: 99;
+        }
+}
 
     .wp-block-quote {
         border-left: none;
     }
 
-}
