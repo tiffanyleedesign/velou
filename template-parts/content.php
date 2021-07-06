@@ -13,6 +13,13 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
+			$categories_list = get_the_category_list( esc_html__( ', ', 'velou' ) );
+			if ( $categories_list ) {
+				/* translators: 1: list of categories. */
+				printf( '<span class="cat-single-news">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
