@@ -1,0 +1,25 @@
+.page-id-37 {
+  .wp-post-image {
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.entry-title {
+  font-weight: 400;
+  padding: 0 1.5rem;
+}
+
+.contact-info {
+  padding: 0 1.5rem;
+
+  svg {
+    fill: $color__background-base1;
+    display: inline-block;
+  }
+}
+
+.phone-email-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

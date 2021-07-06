@@ -28,17 +28,15 @@ get_header();
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>'); ?>
-
 					<?php the_post_thumbnail('large');	?>
 				</header>
 
 				<div class="entry-content">
+					<div class="contact-info">
 					<?php
-					the_content();
 					if ( function_exists ('get_field')) {
-
 						if (get_field('address')) {?>
-						<div class="address">
+						<div class="address velou-info">
 							<?php get_template_part('images/icon-location') ?>
 							<p><?php the_field('address'); ?> </p>
 						</div>
@@ -46,43 +44,52 @@ get_header();
 						}
 
 						if (get_field('hours')) {?>
-						<div class="hours">
+						<div class="hours velou-info">
 							<?php get_template_part('images/icon-clock') ?>
 							<p><?php the_field('hours'); ?> </p>
 						</div><?php
 							
 						}
-
+						
 						if (get_field('phone')) {?>
-						<div class="phone">
-							<?php get_template_part('images/icon-phone') ?>
-							<p><?php the_field('phone'); ?> </p>
-						</div><?php
-							
-						}
+						<div class="phone-email-wrapper">
+							<div class="phone velou-info">
+								<?php get_template_part('images/icon-phone') ?>
+								<p><?php the_field('phone'); ?> </p>
+							</div><?php
+								
+							}
 
-						if (get_field('email')) {?>
-						<div class="email">
-							<?php get_template_part('images/icon-email') ?>
-							<p><?php the_field('email'); ?> </p>
-						</div><?php
+							if (get_field('email')) {?>
+							<div class="email velou-info">
+								<?php get_template_part('images/icon-email') ?>
+								<p><?php the_field('email'); ?> </p>
+							</div>
+						</div>
+						<?php
 							
 						}
 
 						if (get_field('parking_info')) {?>
-						<div class="parking">
+						<div class="parking velou-info">
 							<?php get_template_part('images/icon-parking') ?>
 							<p><?php the_field('parking_info'); ?> </p>
 						</div><?php						
 						}
 						?>
+					</div>
 						
 						<!-- FAQ CTA -->
 						<div class="cta-hollow">
 							<a href="<?php echo get_permalink(12); ?>">FAQ</a>
 						</div>
+					</div>
 
 						<?php
+						
+						// Display Contact Form 
+						the_content();
+
 						$location = get_field('map');
 						if( $location ): ?>
 							<div class="acf-map" data-zoom="14">

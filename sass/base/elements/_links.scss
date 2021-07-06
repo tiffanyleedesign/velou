@@ -52,6 +52,7 @@ a {
 
 .cta-hollow {
   @include cta;
+  margin: 0 auto;
   color: $color__button-text1;
   border: 2px solid $color__button2;
 
@@ -68,6 +69,7 @@ a {
 
 .cta-solid {
   @include cta;
+  margin: 0 auto;
   background-color: $color__button2;
   padding: 0.8rem 1rem;
 
