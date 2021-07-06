@@ -16,8 +16,10 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+		<h1>News</h1>
+		
 		<?php
+		
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
