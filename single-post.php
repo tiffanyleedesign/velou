@@ -11,21 +11,24 @@ get_header();
 ?>
 	<main id="primary" class="site-main">
 
+
 		<?php
 		while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content', get_post_type() );	
+				get_the_category( $post_id = false);
 			?>
 
 			<!-- Return to news list link -->
 	
-			<div class="return">
-				<a href="<?php echo get_permalink(106); ?>">Book Now</a>
-			</div>	
+			<!-- <div class="return"> -->
+			<!-- <a href="<?php //echo get_permalink(106); ?>">Book Now</a> -->
+			<!-- </div>	 -->
 
 			<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->
 
 			<section class="home-blog">
-				<h2>You May Also Like</h2>	
+				
+				<p>You May Also Like</p>	
 				<?php
 				
 				$args = array(

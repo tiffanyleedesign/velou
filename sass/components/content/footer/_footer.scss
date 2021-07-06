@@ -1,0 +1,40 @@
+footer{
+    // background-color: #eee;
+    margin: 2rem;
+    .footer-logo{       
+        width: 7rem;
+    }
+
+    .footer-contact{
+        margin: 1rem 0rem;        
+    } 
+    .email,
+    .phone{
+        margin-top: 1rem;
+    }   
+    @media screen and (min-width: $tablet){
+        .footer-info{
+            margin:2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        } 
+        .footer-logo{       
+            width: 10rem;
+        }
+        .footer-contact-right{
+            text-align: right;
+        }
+        ul{
+            justify-content: flex-end;
+        }
+    }        
+
+    @media screen and (min-width: $desktop){
+        .footer-info{
+            margin: 2rem 10rem;
+        }
+    }
+}
+
+
