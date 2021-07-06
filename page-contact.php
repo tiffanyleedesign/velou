@@ -35,7 +35,6 @@ get_header();
 					<div class="contact-info">
 					<?php
 					if ( function_exists ('get_field')) {
-
 						if (get_field('address')) {?>
 						<div class="address velou-info">
 							<?php get_template_part('images/icon-location') ?>
@@ -78,6 +77,7 @@ get_header();
 						</div><?php						
 						}
 						?>
+					</div>
 						
 						<!-- FAQ CTA -->
 						<div class="cta-hollow">
