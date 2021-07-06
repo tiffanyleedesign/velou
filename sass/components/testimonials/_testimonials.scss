@@ -1,66 +1,6 @@
-// .box {
-//     position:relative;
-
-//     // A box behind the actual quote
-//     ::before {
-//         content: " ";
-//         width: 50%;
-//         height: 300px;
-//         display:block;
-//         position: absolute;
-//         z-index: -1;
-//         background-color: $color__background-accent1;
-
-//     }
-
-//         h2 {
-//             font-family: $font__heading;
-//             margin-bottom: 2rem;
-//             z-index: 2;
-//             position: absolute;
-//             margin-left: 2rem;
-//             background-color: transparent;
-//             background-color: $color__background-accent1;
-//         }
-        
-//         .swiper-container {
-//             top: 4rem;
-//         }
-
-//         .wp-block-quote {
-//             border-left: none;
-//         }
-
-
-//         blockquote .wp-block-quote {
-//             margin:2rem;
-//             padding-top: 5rem;
-
-//             background-color: $color__background-accent4;
-//             p { 
-//                 color: $color__text-input;
-//                 font-style: italic;
-//                 padding-top: -5rem;
-//                 position: absolute;
-//                 z-index: 100;
-//                 left: 10rem;
-
-//             }
-
-//             cite {
-                
-//                 left: 5rem;
-//                 color: $color__text-input;
-
-
-//             }
-//         }
-    
-// }
-
 .testimonial {
     position: relative;    
-    width: 100%;
+   width: 100%;
     margin: 2rem auto;
     .block{
         background-color: $color__background-screen;
@@ -99,6 +39,7 @@
         background-color: lightgrey;
         position: relative;
         z-index: 99;
+        overflow: hidden;
     }
 
     .wp-block-quote {
