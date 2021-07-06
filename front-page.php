@@ -106,9 +106,13 @@ get_header();
 
 			if ( $query->have_posts() ): ?>
 				<section class="home-slider testimonial">
-					
+					<div class="block">
+						<p class="quote">"</p>
+						<h2 class="testimonial-title">Customer Reviews</h2>
+						
+					</div>
 				
-					<h2>Customer Reviews</h2>
+					
 					
 					<div class="swiper-container">
 						<div class="swiper-wrapper">

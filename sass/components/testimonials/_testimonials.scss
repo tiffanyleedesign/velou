@@ -59,29 +59,59 @@
 // }
 
 .testimonial {
-    position: relative;
-
-    ::before {
-        content: '';
-        display: block;
-        width: 70%;
-        height: 40%;
-        position: absolute;
-        top: 0;
+    position: relative;    
+    width: 100%;
+    margin: 2rem auto;
+    .block{
+        background-color: $color__background-screen;
+        width: 80%;
+        height: 20rem;
+        position: relative;
         left: 0;
-        z-index: -1;
-        background-color: gray;
+        .quote{
+            position: relative;
+            font-size: 10rem;
+            left: 3rem;
+            color: white;
+            font-family: $font__heading;
+            font-style: italic;
+        }
+        .testimonial-title{
+            position: relative;
+            color: $color__text-main;
+            font-family: $font__heading;
+            top: -27rem;
+            left: 7rem;
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
     }
-        
+   
+    .swiper-container{
+        position: relative;
+        left: 7rem;
+        top: -13rem;
+        z-index: 1000;
+    }
+
     blockquote {
-        width: 50%;
+        width: 70%;
         background-color: lightgrey;
         position: relative;
         z-index: 99;
-        }
-}
+    }
 
     .wp-block-quote {
-        border-left: none;
+            border-left: none;
     }
+
+    .swiper-pagination{
+        position: relative;
+        top:4rem;
+        color: black;
+    }    
+
+}
+
+    
 
