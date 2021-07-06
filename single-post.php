@@ -16,8 +16,13 @@ get_header();
 		while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content', get_post_type() );	
 				get_the_category( $post_id = false);
+				
 			?>
 
+		<div class="return">
+			<p class='return-arrow'><a href="<?php echo get_permalink(106); ?>"><?php get_template_part('images/iconmonstr-arrow-up') ?></a></p>
+			<a href="<?php echo get_permalink(89); ?>"> Return to News List </a>
+		</div>
 			<!-- Return to news list link -->
 	
 			<!-- <div class="return"> -->
@@ -28,7 +33,7 @@ get_header();
 
 			<section class="home-blog">
 				
-				<p>You May Also Like</p>	
+				<span>You May Also Like</span>	
 				<?php
 				
 				$args = array(
@@ -52,6 +57,9 @@ get_header();
 						<?php
 						}
 						wp_reset_postdata(); ?>				
+					
+
+
 					</section>
 					<?php
 				}
