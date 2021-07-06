@@ -46,6 +46,7 @@ a {
   &:focus,
   &:active {
     @include cta-hover;
+    border: none;
   }
 }
 

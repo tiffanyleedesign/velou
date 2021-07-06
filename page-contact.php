@@ -15,12 +15,21 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<!-- <section class="page-hero">
+		<div>
+		</div>
+		<div>
+		</div>
+	</section> -->
+
+	<main id="primary" class="site-main">	
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>'); ?>
+
+					<?php the_post_thumbnail('large');	?>
 				</header>
 
 				<div class="entry-content">
@@ -30,13 +39,15 @@ get_header();
 
 						if (get_field('address')) {?>
 						<div class="address">
-						<p><?php the_field('address'); ?> </p>
+							<?php get_template_part('images/icon-location') ?>
+							<p><?php the_field('address'); ?> </p>
 						</div>
 						<?php
 						}
 
 						if (get_field('hours')) {?>
 						<div class="hours">
+							<?php get_template_part('images/icon-clock') ?>
 							<p><?php the_field('hours'); ?> </p>
 						</div><?php
 							
@@ -44,6 +55,7 @@ get_header();
 
 						if (get_field('phone')) {?>
 						<div class="phone">
+							<?php get_template_part('images/icon-phone') ?>
 							<p><?php the_field('phone'); ?> </p>
 						</div><?php
 							
@@ -51,6 +63,7 @@ get_header();
 
 						if (get_field('email')) {?>
 						<div class="email">
+							<?php get_template_part('images/icon-email') ?>
 							<p><?php the_field('email'); ?> </p>
 						</div><?php
 							
@@ -58,6 +71,7 @@ get_header();
 
 						if (get_field('parking_info')) {?>
 						<div class="parking">
+							<?php get_template_part('images/icon-parking') ?>
 							<p><?php the_field('parking_info'); ?> </p>
 						</div><?php						
 						}
