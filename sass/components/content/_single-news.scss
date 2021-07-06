@@ -3,7 +3,7 @@
 	font-family: $font__heading;
     padding-bottom: 1.5rem;
     .posted-on {
-        font-size: 30px;
+        font-size: 1rem;
 
     }
 
@@ -13,8 +13,8 @@
     font-family: $font__heading;
     border-top: 2px solid $color__background-accent2;
     border-bottom: 2px solid $color__background-accent2;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80%;
+    margin: 0 auto;
 
     p {
         text-align: center;
