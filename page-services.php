@@ -20,11 +20,11 @@ get_header();
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 			<section class="hero">
+				<h1><?php the_title() ?></h1>
 				<?php the_post_thumbnail('large');	?>
 			</section>	
 
-			<h1><?php the_title() ?></h1>
-
+			
 			<section class="services">
 				
 				<?php 
@@ -43,7 +43,7 @@ get_header();
 						?> 
 						<article class="accordion-menu">
 
-							<div class="accordion-header"><h3><?php the_title();  ?></h3></div>
+							<div class="accordion-header"><h3><?php the_title();  ?></h3><span class="acc-icon"></span></div>
 							
 							<div class="accordion-content">
 								<?php
