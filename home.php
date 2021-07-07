@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The main template file List of Blog Posts
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -14,8 +14,9 @@
 
 get_header();
 ?>
-
 	<main id="primary" class="site-main">
+		
+		<h1 class='news-list'>News</h1>
 		
 		<?php
 		
@@ -32,13 +33,35 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+				?>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<div class="post-thumbnail-list">
+				<?php velou_post_thumbnail(); ?>
+				
+				<div class="entry-content">
+				
+				<?php
+				$categories_list = get_the_category_list( esc_html__( ', ', 'velou' ) );
+				if ( $categories_list ) {
+					/* translators: 1: list of categories. */
+					printf( '<span class="cat-news-list">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				}
+				
+				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_excerpt();
+
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'velou' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
+			</div><!-- .entry-content -->
+
+				<?php
+				// get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
 
@@ -54,5 +77,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-// get_sidebar();
 get_footer();
