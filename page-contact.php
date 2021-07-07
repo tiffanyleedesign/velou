@@ -15,26 +15,20 @@
 get_header();
 ?>
 
-	<!-- <section class="page-hero">
-		<div>
-		</div>
-		<div>
-		</div>
-	</section> -->
-
 	<main id="primary" class="site-main">	
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<header class="page-header">
+				<!-- Hero section -->
+				<section class="page-hero">
 					<div class="page-title">
 						<?php the_title( '<h1 class="contact-title">', ' Us</h1>'); ?>
 					</div>
 					<div class="page-thumbnail">
 						<?php the_post_thumbnail('large');	?>
 					</div>
-				</header>
+				</section>
 
 					<div class="contact-info">
 					<?php			

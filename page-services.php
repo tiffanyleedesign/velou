@@ -19,11 +19,16 @@ get_header();
 
 		<?php
 		while ( have_posts() ) : the_post(); ?>
-			<section class="hero">
-				<h1><?php the_title() ?></h1>
-				<?php the_post_thumbnail('large');	?>
-			</section>	
 
+			<!-- Hero section -->
+			<section class="page-hero">
+				<div class="page-title">
+					<h1><?php the_title() ?></h1>
+				</div>
+				<div class="page-thumbnail">
+					<?php the_post_thumbnail('large');	?>
+				</div>
+			</section>
 			
 			<section class="services accordion-container">
 				
