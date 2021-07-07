@@ -25,7 +25,7 @@ get_header();
 			</section>	
 
 			
-			<section class="services">
+			<section class="services accordion-container">
 				
 				<?php 
 				$args = array(
@@ -66,13 +66,13 @@ get_header();
 										<caption> <?php the_title() ?> Prices</caption>
 										<tr>
 											<th>Name</th>
-											<th>Price</th>
+											<th class="price-field">Price</th>
 										</tr>
 									
 										<?php while( have_rows('service') ): the_row(); ?>									
 											<tr>
 												<td><?php the_sub_field('service_name'); ?></td>
-												<td><?php the_sub_field('price'); ?></td>
+												<td class="price-field"><?php the_sub_field('price'); ?></td>
 											</tr>											
 										<?php endwhile; ?>
 									
