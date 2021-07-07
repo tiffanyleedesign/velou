@@ -128,7 +128,6 @@ get_header();
 						<!-- <div class="swiper-button-prev"></div> -->
 						<div class="swiper-button-next"></div>
 					</div>
-				
 
 				</section>
 				<?php wp_reset_postdata();
