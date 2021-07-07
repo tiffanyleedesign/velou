@@ -20,25 +20,23 @@
 				
 				<?php 
 				if ( function_exists( 'get_field' ) ) {
-					if ( ! is_page('contact') ) {
-						if ( get_field('address', 37) ) {?>
-							<div class="address">
-								<p><?php the_field('address', 37)?></p>
-							</div>
-						<?php
-						}
-						if ( get_field('email', 37) ) {?>
-							<div class="email">
-								<p><?php the_field('email', 37) ?></p>
-							</div>
-						<?php
-						}
-						if ( get_field('phone', 37) ) {?>
-							<div class="phone">
-								<p><?php the_field('phone', 37) ?></p>
-							</div>
-						<?php
-						}
+					if ( get_field('address', 37) ) {?>
+						<div class="address">
+							<p><?php the_field('address', 37)?></p>
+						</div>
+					<?php
+					}
+					if ( get_field('email', 37) ) {?>
+						<div class="email">
+							<p><?php the_field('email', 37) ?></p>
+						</div>
+					<?php
+					}
+					if ( get_field('phone', 37) ) {?>
+						<div class="phone">
+							<p><?php the_field('phone', 37) ?></p>
+						</div>
+					<?php
 					}
 				}	
 				?>
