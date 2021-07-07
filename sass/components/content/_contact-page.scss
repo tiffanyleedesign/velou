@@ -1,25 +1,95 @@
-.page-id-37 {
-  .wp-post-image {
-    height: 500px;
-    object-fit: cover;
+// Page hero section
+.page-header {
+  display: block;
+
+  .page-title {
+    font-weight: 400;
+    padding: 0 1.5rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    .page-thumbnail {
+      width: 50%;
+    }
+
+    .page-title {
+      width: 50%;
+      padding-left: 5rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
-.entry-title {
-  font-weight: 400;
-  padding: 0 1.5rem;
+.wp-post-image {
+  height: 500px;
+  object-fit: cover;
+
+  @media screen and (min-width: $tablet) {
+    height: 90vh;
+    width: 100%;
+  }
 }
+// ---- Hero section end
 
 .contact-info {
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
 
   svg {
     fill: $color__background-base1;
     display: inline-block;
   }
+
+  // each information div wrapper
+  .velou-info {
+    padding-bottom: 1rem;
+    max-width: 400px;
+  }
+
+  .velou-hours {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    svg {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Inline Phone and email information
+  .phone-email-wrapper {
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+  }
+
+  .cta-hollow {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+  }
 }
 
-.phone-email-wrapper {
-  display: flex;
-  justify-content: space-between;
+// Forminator Plugin contact form
+.contact-form {
+  font-family: $font__heading;
+  padding: 2rem 1.5rem;
+  background-color: $color__background-screen;
+  color: $color__background-accent4;
+
+  .forminator-ui#forminator-module-365.forminator-design--flat
+    .forminator-button-submit {
+    width: 200px;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
 }

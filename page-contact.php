@@ -26,15 +26,19 @@ get_header();
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>'); ?>
-					<?php the_post_thumbnail('large');	?>
+
+				<header class="page-header">
+					<div class="page-title">
+						<?php the_title( '<h1 class="contact-title">', ' Us</h1>'); ?>
+					</div>
+					<div class="page-thumbnail">
+						<?php the_post_thumbnail('large');	?>
+					</div>
 				</header>
 
-				<div class="entry-content">
 					<div class="contact-info">
-					<?php
-					if ( function_exists ('get_field')) {
+					<?php			
+					if ( function_exists ('get_field')) :
 						if (get_field('address')) {?>
 						<div class="address velou-info">
 							<?php get_template_part('images/icon-location') ?>
@@ -43,14 +47,24 @@ get_header();
 						<?php
 						}
 
-						if (get_field('hours')) {?>
-						<div class="hours velou-info">
-							<?php get_template_part('images/icon-clock') ?>
-							<p><?php the_field('hours'); ?> </p>
-						</div><?php
-							
-						}
-						
+						if( have_rows('hours') ):
+							get_template_part('images/icon-clock');
+							// Loop through rows.
+							while( have_rows('hours') ) : the_row();
+								// Load sub field value.
+								$get_day = get_sub_field('day');
+								$get_hour = get_sub_field('hour');?>
+
+								<div class="velou-hours">
+									<div class="open-day"><?php echo $get_day; ?></div>
+									<div class="open-hour"><?php echo $get_hour; ?></div>
+								</div>
+								<?php
+							// End loop.
+							endwhile;
+							// Do something...
+						endif;
+
 						if (get_field('phone')) {?>
 						<div class="phone-email-wrapper">
 							<div class="phone velou-info">
@@ -67,7 +81,6 @@ get_header();
 							</div>
 						</div>
 						<?php
-							
 						}
 
 						if (get_field('parking_info')) {?>
@@ -85,20 +98,21 @@ get_header();
 						</div>
 					</div>
 
-						<?php
-						
-						// Display Contact Form 
-						the_content();
 
+						<div class="contact-form">
+							<h2>Speak to Us</h2>
+							<?php the_content();?>
+						</div>
+
+						<?php 
 						$location = get_field('map');
 						if( $location ): ?>
 							<div class="acf-map" data-zoom="14">
 								<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
 							</div>
 					<?php endif;								 		
-					}
+					endif;
 					?>
-				</div>
 			</article>
 		<?php endwhile; ?>
 	</main><!-- #main -->
