@@ -1,6 +1,41 @@
 .page-id-106 {
 
     .services {
-        
+        .accordion-menu {
+
+            &:nth-child(1) {
+                background-color: #7c857f;
+                color: $color__background-base3;
+            }
+
+            &:nth-child(2) {
+                background-color: $color__background-base1;
+                color: #fff;
+            }
+
+            &:nth-child(3) {
+                background-color: $color__background-accent1;
+                color: #464847;
+            }
+
+            &:nth-child(7) {
+                background-color: #EAECE9;
+                color: #464847;
+            }
+
+            &:nth-child(4) {
+                background-color: $color__background-base3;
+                color: #63534A;
+            }
+
+            &:nth-child(5) {
+                background-color: $color__background-base2;
+            }
+
+            &:nth-child(6) {
+                background-color: $color__background-accent3;
+                color:#fff;
+            }
+        }
     }
 }
