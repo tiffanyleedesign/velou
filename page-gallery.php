@@ -20,9 +20,11 @@ get_header();
 	<?php
 	while ( have_posts() ) : the_post();?>
 		
-		<h1><?php the_title(); ?></h1>
+	<div class="wrapper">
 
+		<h1><?php the_title(); ?></h1>
 		<section class="gallery">
+
 			<?php 
 			$args = array(
 				'post_type'		=> 'velou-gallery',
@@ -45,8 +47,6 @@ get_header();
 			);
 			
 			if ( $query->have_posts() ){ ?>
-				<h2>Our Work Examples</h2>
-
 				<!-- Create Sorting Buttons -->
 				<div id="btn-container">
 					<button class="filter-btn active" onclick="filterSelection('all')"> All</button>
@@ -65,13 +65,13 @@ get_header();
 					while ( $query->have_posts() ) : $query->the_post();
 						$terms = get_the_terms($post->ID, 'velou-service-type');?>
 						<div class="<?php foreach($terms as $term) {
-									echo ' ' . $term->slug;
-							}?> filter-div">
+							echo ' ' . $term->slug; }?> filter-div">
 							<?php the_post_thumbnail('medium');?>
 						</div>
+					<?php 
+					endwhile; ?>
 				</div>
-				<?php 
-				endwhile;
+				<?php
 				wp_reset_postdata();
 			}?>
 		</section>

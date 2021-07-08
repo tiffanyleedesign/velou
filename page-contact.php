@@ -30,57 +30,61 @@ get_header();
 					</div>
 				</section>
 
-					<div class="contact-info">
+					<div class="contact-info wrapper">
 					<?php			
 					if ( function_exists ('get_field')) :
 						if (get_field('address')) {?>
-						<div class="address velou-info">
-							<?php get_template_part('images/icon-location') ?>
-							<p><?php the_field('address'); ?> </p>
-						</div>
+						<div class="col-left">
+							<div class="address velou-info">
+								<?php get_template_part('images/icon-location') ?>
+								<p><?php the_field('address'); ?> </p>
+							</div>
 						<?php
 						}
 
-						if( have_rows('hours') ):
-							get_template_part('images/icon-clock');
-							// Loop through rows.
-							while( have_rows('hours') ) : the_row();
-								// Load sub field value.
-								$get_day = get_sub_field('day');
-								$get_hour = get_sub_field('hour');?>
+					if( have_rows('hours') ):
+						get_template_part('images/icon-clock');
+						// Loop through rows.
+						while( have_rows('hours') ) : the_row();
+							// Load sub field value.
+							$get_day = get_sub_field('day');
+							$get_hour = get_sub_field('hour');?>
 
-								<div class="velou-hours">
-									<div class="open-day"><?php echo $get_day; ?></div>
-									<div class="open-hour"><?php echo $get_hour; ?></div>
-								</div>
-								<?php
-							// End loop.
-							endwhile;
-							// Do something...
-						endif;
-
+							<div class="velou-hours">
+								<div class="open-day"><?php echo $get_day; ?></div>
+								<div class="open-hour"><?php echo $get_hour; ?></div>
+							</div>
+							<?php
+						// End loop.
+						endwhile;
+						// Do something...
+					endif; ?>
+						</div>
+						<?php
 						if (get_field('phone')) {?>
-						<div class="phone-email-wrapper">
-							<div class="phone velou-info">
-								<?php get_template_part('images/icon-phone') ?>
-								<p><?php the_field('phone'); ?> </p>
-							</div><?php
-								
+						<div class="col-right">
+							<div class="phone-email-wrapper">
+								<div class="phone velou-info">
+									<?php get_template_part('images/icon-phone') ?>
+									<p><?php the_field('phone'); ?> </p>
+								</div><?php
+									
+								}
+
+								if (get_field('email')) {?>
+								<div class="email velou-info">
+									<?php get_template_part('images/icon-email') ?>
+									<p><?php the_field('email'); ?> </p>
+								</div>
+							</div>
+							<?php
 							}
 
-							if (get_field('email')) {?>
-							<div class="email velou-info">
-								<?php get_template_part('images/icon-email') ?>
-								<p><?php the_field('email'); ?> </p>
+							if (get_field('parking_info')) {?>
+							<div class="parking velou-info">
+								<?php get_template_part('images/icon-parking') ?>
+								<p><?php the_field('parking_info'); ?> </p>
 							</div>
-						</div>
-						<?php
-						}
-
-						if (get_field('parking_info')) {?>
-						<div class="parking velou-info">
-							<?php get_template_part('images/icon-parking') ?>
-							<p><?php the_field('parking_info'); ?> </p>
 						</div><?php						
 						}
 						?>
@@ -93,7 +97,7 @@ get_header();
 					</div>
 
 
-						<div class="contact-form">
+						<div class="contact-form wrapper">
 							<h2>Speak to Us</h2>
 							<?php the_content();?>
 						</div>

@@ -18,7 +18,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     svg {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -35,6 +35,18 @@
   }
 
   @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-around;
+    .col-left,
+    .col-right {
+      padding: 0 2rem;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    .col-left,
+    .col-right {
+      padding: 0 5rem;
+    }
   }
 }
 
