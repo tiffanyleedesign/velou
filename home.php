@@ -48,7 +48,7 @@ get_header();
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				}
 				
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="news-list-title">', '</h1>' );
 				the_excerpt();
 
 				wp_link_pages(
@@ -73,6 +73,9 @@ get_header();
 
 		endif;
 		?>
+
+
+
 
 	</main><!-- #main -->
 
