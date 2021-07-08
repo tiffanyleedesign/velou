@@ -14,11 +14,11 @@ get_header();
 
 		<?php
 		while ( have_posts() ) : the_post();?>
+			
+			<h1><?php the_title() ?></h1>
 			<section class="hero">
 				<?php the_post_thumbnail('large');	?>
 			</section>
-			<h1><?php the_title() ?></h1>
-		
 
 			<section class="bio">
 				<?php 
@@ -37,9 +37,10 @@ get_header();
 			<div class="cta-solid">
 				<a href="<?php echo get_permalink(294); ?>">Book Now</a>
 			</div>
+			<!-- Testimonial Section -->
 
 			<section class="testimonial">
-				<h3>Testimonial</h3>
+				<!-- <h3>Testimonial</h3> -->
 					<?php
 				
 					$args = array(
