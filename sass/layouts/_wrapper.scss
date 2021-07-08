@@ -1,0 +1,16 @@
+// Page content(paragraphs) section wrapper
+.wrapper {
+  padding: 0 1.5rem; // mobile padding
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+// 2 column layout on desktop view
+.col-left,
+.col-right {
+  width: 100%; // mobile view: full width
+
+  @media screen and (min-width: $tablet) {
+    width: 50%; // tablet ~ desktop - 2 col layout
+  }
+}
