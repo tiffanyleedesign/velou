@@ -1,8 +1,13 @@
 .page-id-21{
     // background-color: green;
     .page-hero{
-        width: 10rem;
-        margin: 5rem auto;
+        text-align: center;
+        margin-top: 2rem;;
+        svg{
+            width: 10rem;
+        
+        }
+        
     }
     .mission{
         margin: 2rem;
@@ -87,5 +92,51 @@
             top: 4rem;
             margin-top: 1rem;
         }
+    }
+
+    @media screen and (min-width: $tablet){
+        .page-hero{
+            display: block;
+        }
+        .stylists-section{
+            text-align: center;
+            p{
+                width: 50%;
+                margin: 2rem auto;;
+            }
+        }
+        .inner-cta{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (min-width: $desktop){
+        .page-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .page-thumbnail{
+                width: 50%;
+            }
+            .page-hero{
+                width: 50%;
+                p{
+                    text-align: left;
+                    padding: 3rem;;
+                }
+            }
+        }
+        .stylists-section{
+            .stylists{
+                .one-stylist{
+                    width: 20%;
+                }
+            }
+           
+        }
+
     }
 }
