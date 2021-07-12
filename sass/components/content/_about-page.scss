@@ -4,10 +4,8 @@
         text-align: center;
         margin-top: 2rem;;
         svg{
-            width: 10rem;
-        
-        }
-        
+            width: 10rem;        
+        }        
     }
     .mission{
         margin: 2rem;
@@ -38,14 +36,17 @@
             .one-stylist{
                 width: 48%;
                 margin: 2rem 0;
+                text-align: left;
                 h3{
+                    text-align: left;
                     font-weight: bold;
-                    margin: 0 1rem;
+                    margin: 0 .5rem;
                 }
                 p{
+                    width: 100%;
                     padding: 0;
                     text-align: left;
-                    margin: 0 1rem;
+                    margin: 0 .5rem;
                    a{
                     color: $color__text-main;
                     text-decoration: none;
@@ -53,8 +54,7 @@
                     } 
                 }
                 a{
-                    margin: 0 1rem;
-                    text-align: left;
+                    margin: 0 .5rem;
                     color: $color__background-screen;
                     text-decoration: underline;
                 }                
