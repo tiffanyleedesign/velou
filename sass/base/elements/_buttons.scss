@@ -6,6 +6,10 @@ input[type="submit"] {
   letter-spacing: 1px;
   text-transform: capitalize;
   font-family: $font__heading;
+
+  @media (min-width: $tablet) {
+    font-size: 1.125rem;
+  }
 }
 
 // page-gallery.php filter buttons
