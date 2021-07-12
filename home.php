@@ -28,44 +28,44 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 				<?php
-			endif;
+			endif;?>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				?>
+			<!-- /* Start the Loop */ -->
+			<article class="single-blog">
+				<?php while ( have_posts() ) :
+					the_post();?>
+					<div class="post-thumbnail-list">
+					
+						<?php the_post_thumbnail(); ?>
+					
+						<div class="entry-content">				
+							<?php
+							$categories_list = get_the_category_list( esc_html__( ', ', 'velou' ) );
+							if ( $categories_list ) {
+								/* translators: 1: list of categories. */
+								printf( '<span class="cat-news-list">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							}
+						
+							the_title( '<h1 class="news-list-title">', '</h1>' );
+							the_excerpt();
 
-				<div class="post-thumbnail-list">
-				<?php velou_post_thumbnail(); ?>
-				
-				<div class="entry-content">
-				
-				<?php
-				$categories_list = get_the_category_list( esc_html__( ', ', 'velou' ) );
-				if ( $categories_list ) {
-					/* translators: 1: list of categories. */
-					printf( '<span class="cat-news-list">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				}
-				
-				the_title( '<h1 class="news-list-title">', '</h1>' );
-				the_excerpt();
+							// wp_link_pages(
+							// 	array(
+							// 		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'velou' ),
+							// 		'after'  => '</div>',
+							// 	)
+							// );
+							?>
+						</div><!-- .entry-content -->
 
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'velou' ),
-						'after'  => '</div>',
-					)
-				);
-				?>
-			</div><!-- .entry-content -->
-
-				<?php
-				// get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
+						
+						<!-- // get_template_part( 'template-parts/content', get_post_type() ); -->
+					</div>
+				<?php endwhile;?>
+			
+			</article>
+			<?php the_posts_navigation();
 
 		else :
 
