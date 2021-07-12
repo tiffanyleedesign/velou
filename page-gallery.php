@@ -29,13 +29,6 @@ get_header();
 			$args = array(
 				'post_type'		=> 'velou-gallery',
 				'post_per_page'	=> -1,
-				'tax_query'		 => array(
-					array(
-						'taxonomy' 	=> 'velou-service-type',
-						'field'		=> 'slug',
-						'terms'		=> 'general'
-					)
-				)
 			);
 
 			$query = new WP_Query ( $args );
