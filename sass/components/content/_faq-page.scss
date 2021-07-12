@@ -1,0 +1,157 @@
+.faqs {
+
+    .helpie-faq.accordions.custom-styles {
+        margin: 5rem auto;
+
+        @media (min-width: $tablet) {
+            margin: 7rem auto;
+            
+        }
+
+        @media (min-width: $desktop) {
+            margin: 10rem auto;
+            
+        }
+
+        .search {
+            margin: 0 3rem;
+
+            .search__input {
+                border-radius: 0.5rem;
+                border-color: $color__background-base1;
+                color: $color__background-base1;
+                font-size: 1.125rem;
+
+                &::placeholder {
+                    color: $color__background-base1;
+                    font-weight: 300;
+                }
+            }
+
+            .search__icon {
+                svg {
+                    g {
+                        stroke: $color__background-base1;
+                    }
+                }
+                
+            }
+
+            
+
+            @media (min-width: $tablet) {
+                margin: 0 auto;
+                max-width: 38rem;
+
+                .search__input {
+                    font-size: 1.25rem;
+                    height: 3rem;
+                }
+
+                .search__icon {
+                    right: 15px;
+                    svg {
+                        width: 1.675rem;
+                        height: 1.675rem;
+                    }
+                }
+            }
+
+            @media (min-width:$desktop) {
+                max-width: 42rem;
+
+                .search__input {
+                    font-size: 1.375rem;
+                    padding: .5rem 1.5rem;
+                }
+
+                .search__icon {
+                    right: 18px;
+
+                }
+                
+            }
+
+            
+        }
+
+        .accordion {
+
+            margin: 3rem auto;
+            padding: 0 2rem;
+        
+            // 400px
+            @media (min-width: 25em) {
+                padding: 0 3rem;
+            }
+        
+            @media (min-width: $mobile) {
+                max-width: 35rem;
+            }
+        
+            @media (min-width: $tablet) {
+                // margin: 5rem auto;
+                max-width: 40rem;
+            }
+        
+            @media (min-width:$desktop) {
+                // margin: 10rem auto;
+                max-width: 45rem;
+            }
+        
+            @media (min-width:$desktopWide) {
+                padding: 0 4rem;
+                max-width: 60rem;
+            }
+        
+        
+            .accordion__item {
+                margin: 2rem auto;
+                border: none;
+            
+                @media (min-width: $tablet) {
+                    margin: 2.5rem auto;
+                }
+            
+                @media (min-width:$desktop) {
+                    margin: 3rem auto;
+                }
+            
+                .accordion__header {
+                    // background: $color__background-base3;
+                    .accordion__title {
+                        font-family: $font__heading;
+                        font-weight: 400;
+                        // font-size: 1.125rem;
+                        margin: 0;
+                    }
+            
+                    @media (min-width: $tablet) {
+                        .accordion__title {
+                            font-size: 1.25rem;
+                        }
+                    }
+                
+                    @media (min-width:$desktop) {
+                        .accordion__title {
+                            font-size: 1.375rem;
+                        }
+                    }
+                    
+                }
+
+                .accordion__body {
+                    padding: 0 2rem 1rem;
+
+                    a {
+                        color: $color__background-base1;
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    
+}

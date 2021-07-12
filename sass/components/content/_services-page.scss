@@ -76,4 +76,42 @@
             }
         }
     }
+
+    .cta{
+        height: 18rem;
+        background-color: $color__background-accent4;
+        .inner-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100%;
+
+            .cta-contact,
+            .cta-faq{
+                position: relative;
+                top: 4rem;
+                margin-top: 1rem;
+            }
+        }
+        
+
+        @media screen and (min-width: $tablet){
+
+            .inner-cta{
+                flex-direction: row;
+                width: 25rem;
+            }
+        }
+
+        @media screen and (min-width: $desktop){
+            
+            .inner-cta{
+                flex-direction: row;
+                width: 35rem;
+            }
+        }
+    }
 }

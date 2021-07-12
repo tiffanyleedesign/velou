@@ -19,6 +19,14 @@
   a {
     font-family: $font__heading;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 1.25rem;
+  }
 }
 
 // CTA hover (Book Now)
