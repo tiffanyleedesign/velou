@@ -36,6 +36,44 @@
                 background-color: $color__background-accent3;
                 color:#fff;
             }
+
+            .accordion-content {
+
+                .intro {
+                    img {
+                        width: auto;
+                        height: auto;
+                        max-height: 450px;
+                    }
+                }
+                
+
+                @media (min-width:$desktopWide) {
+                    .intro {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .service-image {
+                            // width: 65%;
+                            display: block;
+                        }
+
+                        p {
+                            padding: 0 1rem;
+                            width: 45%;
+                            margin: 0 1rem;
+                        }
+
+                    }
+                    
+                }
+            
+                // @media (min-width:$desktopWide) {
+                //     padding: 0 4rem;
+                //     max-width: 60rem;
+                // }
+            }
         }
     }
 }

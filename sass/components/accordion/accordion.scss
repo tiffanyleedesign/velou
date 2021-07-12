@@ -125,6 +125,43 @@
                 }
             }
 
+            @media (min-width: $tablet) {
+                padding: 0 1.5rem;
+
+                p, table {
+                    font-size: 1.1rem;
+                }
+
+                table {
+                    caption {
+                        font-size: 1.25rem;
+                    }
+
+                    th {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            @media (min-width: $desktop) {
+                padding: 0 2rem;
+
+                table {
+                    font-size: 1.25rem;
+                }
+
+                table {
+                    caption {
+                        font-size: 1.5rem;
+                    }
+
+                    th {
+                        font-size: 1.1rem;
+                    }
+
+                }
+            }
+
         }
     
         .accordion-content.show {

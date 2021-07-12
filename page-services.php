@@ -54,17 +54,23 @@ get_header();
 								<?php
 																
 								if(function_exists('get_field')){
-									
+
+									echo '<div class="intro">';									
 									$image = get_field('image');
-									$size = 'medium'; 
+									$size = 'large'; 
 									if( $image ) {
+										echo '<div class="service-image">';
 										echo wp_get_attachment_image( $image, $size );
+										echo '</div>';
 									}
 
 									if(get_field('service_description')){?>
 										<p><?php the_field('service_description'); ?> </p>
 										<?php
 									}
+
+									echo '</div>';	
+
 									if( have_rows('service') ): ?>
 				
 										<table>
@@ -97,14 +103,19 @@ get_header();
 			</section>
 
 			<!-- Book Now CTA -->
-			<div class="cta-solid">
-				<a href="<?php echo get_permalink(294); ?>">Book Now</a>
-			</div>
+			<section class="cta">
+				<div class="inner-cta">
+					<div class="cta-solid">
+						<a href="<?php echo get_permalink(294); ?>">Book Now</a>
+					</div>
 			
-			<!-- FAQ CTA -->
-			<div class="cta-hollow">
-				<a href="<?php echo get_permalink(12); ?>">FAQ</a>
-			</div>
+					<!-- FAQ CTA -->
+					<div class="cta-hollow">
+						<a href="<?php echo get_permalink(12); ?>">FAQ</a>
+					</div>
+				</div>
+			</section>
+			
 
 		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
