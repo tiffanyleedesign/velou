@@ -1,5 +1,5 @@
 .contact-info {
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
 
   svg {
     fill: $color__background-base1;
@@ -30,26 +30,31 @@
     padding-top: 2rem;
   }
 
-  .cta-hollow {
-    margin-bottom: 3rem;
-  }
-
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-around;
+
     .col-left,
     .col-right {
       padding: 0 2rem;
     }
+    .phone-email-wrapper {
+      padding-top: 0;
+    }
   }
   @media screen and (min-width: $desktop) {
+    padding-top: 5rem;
     .col-left,
     .col-right {
       padding: 0 5rem;
     }
-    .phone-email-wrapper {
-      padding-top: 0;
-    }
+  }
+}
+
+.page-id-37 {
+  .cta-hollow {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -60,6 +65,10 @@
   background-color: $color__background-screen;
   color: $color__background-accent4;
 
+  h2 {
+    font-size: 2rem;
+  }
+
   .forminator-ui#forminator-module-365.forminator-design--flat
     .forminator-button-submit {
     width: 200px;
@@ -68,5 +77,58 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+  }
+  .forminator-ui#forminator-module-365.forminator-design--flat
+    .forminator-button-submit {
+    background-color: $color__hover-focus;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color__text-input;
+    }
+  }
+
+  // Form text input
+  #forminator-module-365.forminator-design--flat .forminator-input,
+  #forminator-module-365.forminator-design--flat .forminator-input:hover,
+  #forminator-module-365.forminator-design--flat .forminator-input:focus,
+  #forminator-module-365.forminator-design--flat .forminator-input:active {
+    background-color: $color__background-base3;
+    color: $color__background-accent3;
+    height: 50px;
+  }
+  // Form textarea input
+  #forminator-module-365.forminator-design--flat .forminator-textarea,
+  #forminator-module-365.forminator-design--flat .forminator-textarea:hover,
+  #forminator-module-365.forminator-design--flat .forminator-textarea:focus,
+  #forminator-module-365.forminator-design--flat .forminator-textarea:active {
+    background-color: $color__background-base3;
+    color: $color__background-accent3;
+    height: 300px;
+  }
+}
+
+// image next to form (desktop view only)
+.contact-section {
+  .contact-img {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    .contact-form {
+      padding: 4rem 5.5rem;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+      width: 50%;
+    }
+
+    .contact-img {
+      display: block;
+      float: right;
+      width: 50%;
+    }
   }
 }

@@ -158,12 +158,7 @@ function velou_scripts() {
 	}
 
 	if ( is_front_page() || is_page(21)) {
-		// wp_enqueue_style(
-		// 	'swiper-styles',
-		// 	get_template_directory_uri() .'/scss/swiper/swiper.scss',
-		// 	array(),
-		// 	'6.6.1'
-		// );
+
 		wp_enqueue_script(
 			'swiper-scripts',
 			get_template_directory_uri() .'/js/swiper-bundle.min.js',
@@ -182,11 +177,28 @@ function velou_scripts() {
 
 	// Gallery filtering effect
 	if ( is_page(111)) {
+	/*--- Filter ---*/
 		wp_enqueue_script(
 			'gallery-filter',
 			get_template_directory_uri() .'/js/gallery-filter.js', array(), _S_VERSION, true
 		);
-		
+
+	/*--- Lightbox ---*/
+	// Lightbox CSS 
+		wp_enqueue_style( 
+			'lightgallery-styles', get_template_directory_uri() .'/css/lightgallery.css', array(), _S_VERSION, true
+		);
+
+	// Lightbox code bundle
+		wp_enqueue_script( 
+			'lightgallery-scripts',
+			get_template_directory_uri() .'/js/lightgallery.min.js', array(), _S_VERSION, true
+		);
+
+	// Lightbox initial setting
+		wp_enqueue_script( 'lightgallery-settings',
+			get_template_directory_uri() .'/js/lightgallery-settings.js', array('lightgallery-scripts'), _S_VERSION, true
+		);
 	}
 
 	//service page and faq page

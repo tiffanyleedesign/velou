@@ -8,9 +8,10 @@
 }
 
 .filter-div:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor: pointer;
   overflow: hidden;
+  filter: grayscale(100%);
 }
 
 .filter-div img {
@@ -41,3 +42,5 @@
     grid-template-rows: repeat(3, auto);
   }
 }
+
+// Lightbox feature
