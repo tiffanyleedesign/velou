@@ -29,7 +29,7 @@ get_header();
 						the_widget( 'WP_Widget_Recent_Posts' );
 						?>
 					
-						<div class="widget widget_categories">
+						<!-- <div class="widget widget_categories">
 							<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'velou' ); ?></h2>
 							<ul>
 								<?php
@@ -44,14 +44,14 @@ get_header();
 								);
 								?>
 							</ul>
-						</div><!-- .widget -->
+						</div>.widget -->
 
 						<?php
 						/* translators: %1$s: smiley */
-						$velou_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'velou' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$velou_archive_content" );
+						// $velou_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'velou' ), convert_smilies( ':)' ) ) . '</p>';
+						// the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$velou_archive_content" );
 
-						the_widget( 'WP_Widget_Tag_Cloud' );
+						// the_widget( 'WP_Widget_Tag_Cloud' );
 						?>
 
 					</div>
