@@ -10,8 +10,8 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
+<main id="primary" class="site-main">
+	<div class="wrapper">
 		<?php
 		while ( have_posts() ) : the_post();?>
 			<div class="name">
@@ -31,6 +31,10 @@ get_header();
 					<h2>Bio</h2>
 					<?php 
 					if(function_exists('get_field')){
+						if(get_field('short_profile')){?>
+							<p><?php the_field('short_profile'); ?> </p>
+							<?php
+							}
 						if(get_field('bio')){?>
 						<p><?php the_field('bio'); ?> </p>
 						<?php
@@ -126,19 +130,45 @@ get_header();
 			</section>	
 
 			<?php 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-			
-			
-			
-		endwhile; // End of the loop.?>
-		
+			// the_post_navigation(
+			// 	array(
+			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
+			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
+			// 	)
+			// );?>
 
-	</main><!-- #main -->
+<div class="post-navigation">
+		<?php
+		$prev_post = get_previous_post();
+		$next_post = get_next_post();
+		if (!empty( $prev_post )): ?>
+		<div>
+			<a href="<?php echo $prev_post->guid ?>" class="prev">
+				<h4> Previous Stylist</h4>			
+				<p><?php echo $prev_post->post_title ?></p>
+				<?php echo get_the_post_thumbnail( $prev_post->ID, 'thumbnail' ); ?>						
+			</a>
+		</div>	
+		<?php endif;
+		if (!empty( $next_post )): ?>
+		<div>
+			<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="next">
+				<h4>Next Stylist</h4>			
+				<p><?php echo esc_attr( $next_post->post_title ); ?></p>	
+				<?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail' ); ?>						
+			</a>
+		</div>	
+		<?php endif; ?>
+
+	</div>
+	</div>	<?php	
+	
+	
+	
+endwhile; // End of the loop.?>
+		
+	
+</main><!-- #main -->
 
 <?php
 get_footer();

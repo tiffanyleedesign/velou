@@ -1,7 +1,7 @@
 .testimonial {
     position: relative;    
     width: 100%;
-    margin: 2rem auto;
+    margin: 0 auto;
     .block{
         background-color: #D0D4D0;
         width: 80%;
@@ -17,7 +17,6 @@
             font-family: $font__heading;
             font-style: italic;            
         }
-
         .testimonial-title{
             position: relative;
             color: $color__text-main;
@@ -50,7 +49,6 @@
         width: 80%;
         margin-right: 0;
     }
-
     blockquote {
         width: 70%;
         left: 4rem;        
@@ -58,7 +56,6 @@
         z-index: 99;
         overflow: hidden;
     }
-
     .wp-block-quote {
         position: relative;
         left: -.5rem;
@@ -75,15 +72,12 @@
             font-weight: bold;
         }
     }
-
     .swiper-slide {
         margin: 0;
     }
-
     .swiper-pagination{
         position: relative;
-        left: -4rem;
-       
+        left: -4rem;       
     }   
     .swiper-pagination-bullet{
         position: relative;
@@ -91,8 +85,7 @@
         top: 50%;
         width:15px;
         height: 15px;
-    } 
-    
+    }     
     .swiper-button-prev{
         display: none;
     }
@@ -136,7 +129,12 @@
         .swiper-pagination{
             justify-content: center;
             margin: 0 auto;
+            text-align: end;
+            
         }
+        .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+                margin:0 .5rem;
+            }
     }
 
     @media screen and (min-width: $desktop){
@@ -148,10 +146,8 @@
         }
     }
 
-    @media screen and (min-width: $desktopWide){
-        
-        svg{
-            
+    @media screen and (min-width: $desktopWide){        
+        svg{            
             top:7rem;
         }
     }

@@ -1,6 +1,4 @@
 .single-velou-stylist{
-    margin: 2rem;
-    
     p{
         margin-bottom: .5rem;
         a,
@@ -31,10 +29,7 @@
                 object-fit: cover;           
                 }
             }
-       }        
-      
-        
-
+       } 
     }
 
     .bio{
@@ -44,9 +39,35 @@
     .cta-solid{
         margin: 4rem auto;
     }
+    .post-navigation{
+        width: 100%;
+        margin: 0;
+        background-color: $color__background-accent4;
+        display: flex;
+        justify-content: space-between;
+        a,
+        a:visited,
+        a:focus {
+            color: $color__text-main;                
+            padding:0 1rem;
+        }
+        .prev,
+        .next{          
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+    }
 
 
     @media screen and(min-width: $desktop){
+        .name{
+            width: 30%;
+            position: relative;
+            left: 66%;
+        }
         .colored-background{
             position: absolute;
             width: 45%;
@@ -88,13 +109,20 @@
                  margin: 3rem;
             }
         }
+        .testimonial{
+            margin-top: 10rem;
+        }
        
     }
 
     @media screen and (min-width: $desktopWide){
         .name{
+            width: 40%;
             position: relative;
-            left: 65%;
+            left: 66%;
+        }
+        .colored-background{
+            width: 35%;
         }
         .stylist-photo{
             left: 20%;
@@ -103,9 +131,10 @@
                 width: 30rem;
             }
         }
-        .testimonial{
-            margin-top: 10rem;
+        .stylist-photo-medium{
+            left:20%;
         }
+        
         .stylist-portfolio{
             .portfolio-box{
                 .portfolio{

@@ -6,6 +6,10 @@
 --------------------------------------------- */
 @import "content/posts-and-pages";
 
+/* Front Page
+--------------------------------------------- */
+@import "content/front-page";
+
 /* About
 --------------------------------------------- */
 @import "content/about-page";
@@ -73,3 +77,7 @@
 /* Footer Navigation
 --------------------------------------------- */
 @import "footer/footer-nav";
+
+/* Brands Logo Section
+--------------------------------------------- */
+@import "brands-logo/brands";

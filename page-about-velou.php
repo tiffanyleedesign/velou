@@ -39,7 +39,7 @@ get_header();
 				</section>
 	
 
-			
+		<div class="wrapper">
 
 			<!-- Stylists Section -->
 			<?php 
@@ -158,6 +158,7 @@ get_header();
 					</div>
 				</div>
 			</section>
+		</div>	
 		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
 <?php
