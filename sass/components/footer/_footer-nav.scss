@@ -6,13 +6,26 @@
         margin: 0rem;
         li{
             margin-right: 1rem;
-            svg{
-                width:2.5rem;
-                height: 2.5rem;
-                path{
-                    fill: $color__background-screen;
+
+            a {
+                svg{
+                    width:2.5rem;
+                    height: 2.5rem;
+                    path{
+                        transition: all 0.2s ease-in-out;
+                        fill: $color__background-screen;
+                    }
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: $color__background-accent1;
+                        }
+                    }
                 }
             }
+            
         }
     }
 }
