@@ -50,7 +50,25 @@
         }
     }
 
-    @media (min-width: 37em) {
+    .cart-btn {
+        position: absolute;
+        right: 2rem;
+        top: 1.9rem;
+
+        a {
+            display: block;
+            line-height: 1;
+
+            svg {
+                path {
+                    fill: $color__text-main;
+                    fill: $color__background-base1;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $tablet) {
         justify-content: center;
 
         #site-navigation {
@@ -59,6 +77,26 @@
 
         .site-branding {
             width: 100%;
+        }
+
+        .cart-btn {
+            a {
+                svg {
+                    transform: scale(1.125);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 45em) {
+        .cart-btn {
+            right: 2.25rem;
+
+            a {
+                svg {
+                    transform: scale(1.25);
+                }
+            }
         }
     }
 
@@ -73,6 +111,11 @@
                 }
             }
         }
+
+        .cart-btn {
+            right: 3rem;
+            top: 2.05rem;
+        }
     }
 
     @media screen and (min-width: 67.5em) {
@@ -82,6 +125,17 @@
 
                 img {
                     width: 5rem;
+                }
+            }
+        }
+
+        .cart-btn {
+            right: 5rem;
+            top: 2.6rem;
+
+            a {
+                svg {
+                    transform: scale(1.375);
                 }
             }
         }

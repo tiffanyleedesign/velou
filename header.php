@@ -63,6 +63,10 @@
 			?>
 		</nav><!-- #site-navigation -->
 
+		<div class="cart-btn">
+			<a href="./cart/"><?php get_template_part('images/icon-shopping-cart') ?></a>
+		</div>
+
 		<!-- Book Now CTA -->
 
 		<div class="cta-book-now">

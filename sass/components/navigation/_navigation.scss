@@ -24,7 +24,7 @@
 		
 		position: fixed;
 		top: 0;
-		width: 100vw;
+		width: 100%;
 		height: 0;
 
 		background-color: $color__background-base3;
@@ -73,7 +73,7 @@
 	}
 
 	//600px
-	@media screen and (min-width: 37.5em) {
+	@media screen and (min-width: $tablet) {
 		.menu-toggle {
 			display: none;
 		}
@@ -93,8 +93,8 @@
 				padding: 0;
 				height: auto;
 				max-height: unset;
-				width: 90%;
-				max-width: 43rem;
+				width: 85%;
+				max-width: 40rem;
 
 				li {
 					font-size: 1rem;
@@ -102,11 +102,11 @@
 					width: auto;
 
 					&:nth-child(3) {
-						margin-right: 3rem;
+						margin-right: 2.5rem;
 					}
 
 					&:nth-child(4) {
-						margin-left: 3rem;
+						margin-left: 2.5rem;
 					}
 
 
@@ -125,17 +125,17 @@
 		}
 	}
 
-	@media screen and (min-width: 43.75em) {
+	@media screen and (min-width: 45em) {
 		.menu-navigation-menu-container {
 			#primary-menu {
 				
 				li {
 					&:nth-child(3) {
-						margin-right: 4.5rem;
+						margin-right: 3rem;
 					}
 
 					&:nth-child(4) {
-						margin-left: 4.5rem;
+						margin-left: 3.5rem;
 					}
 				}
 			}
