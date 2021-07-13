@@ -38,6 +38,8 @@ get_header();
 					'taxonomy' 	=> 'velou-service-type'
 				)
 			);
+
+			
 			
 			if ( $query->have_posts() ){ ?>
 				<!-- Create Sorting Buttons -->
@@ -53,13 +55,15 @@ get_header();
 				</div>
 
 				<!-- Create Gallery images with corresponding class name -->
-				<div class="filter-container">
+				<div class="filter-container" id="selector1">
 					<?php 
 					while ( $query->have_posts() ) : $query->the_post();
-						$terms = get_the_terms($post->ID, 'velou-service-type');?>
+						$terms = get_the_terms($post->ID, 'velou-service-type'); ?>
+
 						<div class="<?php foreach($terms as $term) {
-							echo ' ' . $term->slug; }?> filter-div">
-							<?php the_post_thumbnail('medium');?>
+							echo ' ' . $term->slug; }?> filter-div item"
+							data-src="<?php echo get_the_post_thumbnail_url($post);?>">
+								<?php the_post_thumbnail('thumbnail');?>
 						</div>
 					<?php 
 					endwhile; ?>

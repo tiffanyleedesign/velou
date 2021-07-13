@@ -96,11 +96,13 @@ get_header();
 						</div>
 					</div>
 
-
-						<div class="contact-form wrapper">
+					<div class="contact-section">
+						<div class="contact-form">
 							<h2>Speak to Us</h2>
 							<?php the_content();?>
 						</div>
+						<img class="contact-img" src="http://velou.bcitwebdeveloper.ca/wp-content/uploads/2021/07/contact-form-img.png" alt="A shop staff and customer at counter">
+					</div>
 
 						<?php 
 						$location = get_field('map');
