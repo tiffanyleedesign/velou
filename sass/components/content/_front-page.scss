@@ -10,11 +10,17 @@
     .stylist{
         position: relative;    
         text-align: left;
+        .swiper-container{
+            width: 100%;
+        } 
         h2{
             width: 13rem;
             margin: 0 auto;
             text-align: center;
             font-size: 2rem;
+        }
+        .swiper-slide-active{
+            width: 100%;
         }
         h3{
             position: relative;
@@ -42,9 +48,11 @@
             display: none;
         }
         .swiper-button-next{
+            display: block!important;
             position: relative;
             top: -35rem;
             left: 90%;
+            color: $color__background-base1;
         }
         .cta-hollow{
             position: relative;
@@ -62,6 +70,10 @@
                 margin: .5rem;
                 width: 15px;
                 height: 15px;
+                
+            }
+            .swiper-pagination-bullet-active{
+                background-color: $color__background-base1;
             }
         }
     }
@@ -69,7 +81,7 @@
     .home-services{
         width: 100%;
         height: 30rem;
-        background-image: url(http://localhost/velou/wp-content/uploads/2021/06/christiann-koepke-dQyS2pMYtok-unsplash.jpg);
+        background-image: url(https://velou.bcitwebdeveloper.ca/wp-content/uploads/2021/06/christiann-koepke-dQyS2pMYtok-unsplash.jpg);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -150,7 +162,7 @@
             }
            .cta-hollow{
                 width:12rem;
-                left: 12%;
+                left: 3%;
                 top: -30rem;
             }
         }
@@ -162,7 +174,7 @@
                 left: 20%;
             }
             h3{
-                left: -20%;
+                left: -32%;
                 top: -3rem;
                 font-size: 2.5rem;
             }
@@ -172,6 +184,7 @@
             }
             .swiper-button-next{
                 top: -45rem;
+                color: $color__background-base1;
             }
             .swiper-pagination{
                 top: -12rem;
@@ -179,22 +192,24 @@
             }
         }
         .home-services{
+           .cta-solid{
+               width: 13rem;
+           }
             position: relative;
             top: -10rem;
+
         }
-        // .testimonial{
-        //     position: relative;
-        //     top: -10rem;
-        // }
+        
     }
 
     @media screen and (min-width: $desktopWide){
+
         .intro{
             .hero{
             img{
                 height: 50rem;
             }
-        }
+            }
         }
         
         .mission{
@@ -204,6 +219,7 @@
                 margin: 0 auto;
             }
         }
+        
         .swiper-slide{
             .short-profile{
             width: 40rem;
