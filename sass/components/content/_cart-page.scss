@@ -75,7 +75,7 @@
             background-color: $color__hover-focus;
             color: $color__button-text2;
             border: none;
-            border-radius: 1.55em;
+            // border-radius: 1.55em;
             font-family: $font__heading;
             &:hover{
                 background: $color__background-accent1;
@@ -106,7 +106,13 @@
                 }
             } 
         }
-
+        .woocommerce-message, 
+        .woocommerce-info, 
+        .woocommerce-error, 
+        .woocommerce-noreviews, 
+        p.no-comments{
+            background-color: $color__background-base1;
+        }
         .woocommerce-message{
             text-align: center;
             color: white;
