@@ -1,5 +1,4 @@
 // Booking - Product Page Styling
-
 .single-product {
   .product_title,
   .price {
@@ -67,13 +66,19 @@
 }
 
 .postid-294 {
-  // Display none meta data
-  .woocommerce-tabs.wc-tabs-wrapper,
-  div.product_meta.posted_in {
-    display: none !important;
+  .tabs.wc-tabs {
+    display: none;
   }
   .posted_in {
     display: none;
+  }
+  #tab-description {
+    p {
+      max-width: 700px;
+    }
+    h2 {
+      display: none;
+    }
   }
 }
 
