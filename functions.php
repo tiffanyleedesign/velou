@@ -196,7 +196,8 @@ function velou_scripts() {
 		);
 
 	// Lightbox initial setting
-		wp_enqueue_script( 'lightgallery-settings',
+		wp_enqueue_script( 
+			'lightgallery-settings',
 			get_template_directory_uri() .'/js/lightgallery-settings.js', array('lightgallery-scripts'), _S_VERSION, true
 		);
 	}
