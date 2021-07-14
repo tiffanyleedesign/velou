@@ -1,0 +1,62 @@
+.page-id-18{
+    .page-content, .entry-content, .entry-summary{
+        margin-top: 0;
+    } 
+    
+    
+    .site-main{
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 2rem;   
+            .post-18{
+            .entry-header{
+                width: 14rem;
+                margin: 0 auto;
+            } 
+        }      
+        .woocommerce-order{
+            p{
+                color: $color__background-base1;
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+            ul{
+                margin-left: 0;
+            }
+        }
+        table{
+             
+            thead,
+            tfoot,
+            tbody{
+                text-align: left;                
+                .product-total{
+                    text-align: right;
+                }     
+            }
+
+            tfoot td{
+                text-align: right;
+                font-weight: bold;
+            }
+
+            tbody .product-total{
+                text-align: right;
+            }
+            
+            tr:nth-child(even) {
+                vertical-align: baseline;
+                background: $color__background-base3;
+            }
+            tr:nth-child(odd) {
+                vertical-align: baseline;
+                background: $color__background-accent4;
+            }
+        }
+        .wc-booking-summary .wc-booking-summary-number .status-paid{
+            background-color: $color__hover-focus;
+        }
+    }
+}
+ 
