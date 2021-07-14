@@ -143,7 +143,7 @@ get_header();
 		$next_post = get_next_post();
 		if (!empty( $prev_post )): ?>
 		<div>
-			<a href="<?php echo $prev_post->guid ?>" class="prev">
+			<a href="<?php echo $prev_post->guid ?>" class="prev-stylist">
 				<h4> Previous Stylist</h4>			
 				<p><?php echo $prev_post->post_title ?></p>
 				<?php echo get_the_post_thumbnail( $prev_post->ID, 'thumbnail' ); ?>						
@@ -152,7 +152,7 @@ get_header();
 		<?php endif;
 		if (!empty( $next_post )): ?>
 		<div>
-			<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="next">
+			<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="next-stylist">
 				<h4>Next Stylist</h4>			
 				<p><?php echo esc_attr( $next_post->post_title ); ?></p>	
 				<?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail' ); ?>						
