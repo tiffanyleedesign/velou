@@ -88,6 +88,22 @@
                 margin-top: 1rem;
             }
         }
+
+        @media screen and (min-width: $tablet){
+
+            .inner-cta{
+                flex-direction: row;
+                width: 25rem;
+            }
+        }
+
+        @media screen and (min-width: $desktop){
+            
+            .inner-cta{
+                flex-direction: row;
+                width: 35rem;
+            }
+        }
     }
     @media screen and (min-width: $mobile){
         .stylists-section{

@@ -147,14 +147,14 @@ get_header();
 				</div>
 			</section>
 
-			
+		</div>		
 			<section class="cta">	
 				<div class="inner-cta">					
 					<a class="cta-solid" href="<?php echo get_permalink(37); ?>">Contact Us</a>
 					<a class="cta-hollow" href="<?php echo get_permalink(12); ?>">FAQ</a>				
 				</div>
 			</section>
-		</div>	
+		
 		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
 <?php
