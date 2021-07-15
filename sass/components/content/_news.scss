@@ -1,5 +1,5 @@
 .blog {
-  .news-list {
+  .page-title {
     margin-left: 1.5rem;
   }
 
@@ -54,5 +54,35 @@
         margin-bottom: 3rem;
       }
     }
+  }
+}
+
+// News Archive Page
+.archive.category {
+  .site-main {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    a {
+      font-family: $font__heading;
+      color: $color__text-input;
+    }
+
+    .entry-content {
+      a {
+        color: $color__text-screen;
+        font-family: $font__main;
+        font-weight: 600;
+      }
+    }
+    img,
+    p {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  .comments-link {
+    display: none;
   }
 }

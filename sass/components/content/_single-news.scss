@@ -70,7 +70,6 @@
     color: $color__text-screen;
     font-family: $font__main;
     font-size: 1rem;
-    // font-weight: lighter;
     padding-bottom: 1.25rem;
     &:hover,
     &:active,
@@ -90,9 +89,9 @@
       padding: 2rem 1.5rem;
     }
 
-    p {
+    .entry-content {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 2rem auto;
     }
   }
 

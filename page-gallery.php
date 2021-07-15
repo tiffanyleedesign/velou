@@ -63,7 +63,7 @@ get_header();
 						<div class="<?php foreach($terms as $term) {
 							echo ' ' . $term->slug; }?> filter-div item"
 							data-src="<?php echo get_the_post_thumbnail_url($post);?>">
-								<?php the_post_thumbnail('thumbnail');?>
+								<?php the_post_thumbnail('medium');?>
 						</div>
 					<?php 
 					endwhile; ?>
