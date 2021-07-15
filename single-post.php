@@ -19,21 +19,13 @@ get_header();
 				
 			?>
 
-		<div class="return">
-			<p class='return-arrow'><a href="<?php echo get_permalink(106); ?>"><?php get_template_part('images/iconmonstr-arrow-up') ?></a></p>
-			<a href="<?php echo get_permalink(89); ?>"> Return to News List </a>
-		</div>
 			<!-- Return to news list link -->
-	
-			<!-- <div class="return"> -->
-			<!-- <a href="<?php //echo get_permalink(106); ?>">Book Now</a> -->
-			<!-- </div>	 -->
-
-			<!-- Last 3 artcticle - !!! to look how can I choose the most popular ones. -->
+			<a class="return" href="<?php echo get_permalink(89); ?>">Return to News List </a>
 
 			<section class="home-blog">
-				
-				<span>You May Also Like</span>	
+				<div class="post-suggestion">
+					<span>You May Also Like</span>
+				</div>	
 				<?php
 				
 				$args = array(
@@ -50,16 +42,13 @@ get_header();
 
 							<article>
 								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('medium'); ?>
+									<?php the_post_thumbnail('thumbnail'); ?>
 									<h3><?php the_title(); ?></h3>
 								</a>
 							</article>
 						<?php
 						}
 						wp_reset_postdata(); ?>				
-					
-
-
 					</section>
 					<?php
 				}

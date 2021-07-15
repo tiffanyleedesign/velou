@@ -32,35 +32,26 @@ get_header();
 
 			<!-- /* Start the Loop */ -->
 			<article class="single-blog">
-				<?php while ( have_posts() ) :
-					the_post();?>
+				<?php while ( have_posts() ) : the_post();?>
+
 					<div class="post-thumbnail-list">
-					
+				
 						<?php the_post_thumbnail(); ?>
-					
 						<div class="entry-content">				
 							<?php
 							$categories_list = get_the_category_list( esc_html__( ', ', 'velou' ) );
 							if ( $categories_list ) {
-								/* translators: 1: list of categories. */
 								printf( '<span class="cat-news-list">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
-								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							}
-						
-							the_title( '<h1 class="news-list-title">', '</h1>' );
+							} ?>
+							<a href="<?php the_permalink()?>">
+							<?php
+							the_title( '<h2 class="news-list-title">', '</h2>' ); ?>					
+							</a>
+							<?php
 							the_excerpt();
 
-							// wp_link_pages(
-							// 	array(
-							// 		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'velou' ),
-							// 		'after'  => '</div>',
-							// 	)
-							// );
 							?>
 						</div><!-- .entry-content -->
-
-						
-						<!-- // get_template_part( 'template-parts/content', get_post_type() ); -->
 					</div>
 				<?php endwhile;?>
 			
@@ -73,10 +64,6 @@ get_header();
 
 		endif;
 		?>
-
-
-
-
 	</main><!-- #main -->
 
 <?php
