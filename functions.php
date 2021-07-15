@@ -209,6 +209,8 @@ function velou_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'velou_scripts' );
 
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');function my_custom_dashboard_widgets() { global $wp_meta_boxes;wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard_help'); }function custom_dashboard_help() { echo '<p>Welcome to Velou Theme Support! Need help? Contact us at <a href="mailto:codenroll@gmail.com">here</a>. For WordPress Tutorials visit: <a href="https://www.wpbeginner.com" target="_blank">WPBeginner</a></p>'; }add_action('wp_dashboard_setup', 'wpse_46445_dashboard_widget');/*
+
 /**
  * Implement the Custom Header feature.
  */
@@ -280,3 +282,125 @@ function velou_excerpt_more( $more ){
 	return $more;
 }
 add_filter('excerpt_more', 'velou_excerpt_more');
+
+
+// -----------------------------------------------------
+// Home Page Widgets
+// -----------------------------------------------------
+add_action('wp_dashboard_setup', 'wpse_46445_dashboard_widget');
+/*
+ * Builds the Custom Dashboard Widget
+ *
+ */
+function wpse_46445_dashboard_widget()
+{
+    $the_widget_title = 'Site Tutorials';
+    wp_add_dashboard_widget('dashboard_tutorials_widget', $the_widget_title, 'wpse_46445_add_widget_content');
+}
+/*
+ * Prints the Custom Dashboard Widget content
+ *
+ */
+function wpse_46445_add_widget_content() 
+{
+    $tutorial_1 = wpse_46445_make_link1(
+        array(
+            'id'=>'s-c_urzTWYQ', 
+            'color'=>'#9ba59e', 
+            'title' => 'How to Add a Service Type', 
+            'button' => 'View Video'
+        )
+    );
+    $tutorial_2 = wpse_46445_make_link2(
+        array(
+            'id'=>'HIq9kkHbMCA', 
+            'color'=>'#9ba59e', 
+            'title' => 'How to add Stylist and Speciality', 
+            'button' => 'View Video'
+        )
+    );
+    $tutorial_3 = wpse_46445_make_link3(
+        array(
+            'id'=>'HIq9kkHbMCA', 
+            'color'=>'#9ba59e', 
+            'title' => 'How to add a Gallery Photo', 
+            'button' => 'View Video'
+        )
+    );
+    $html = <<<HTML
+	<h4 style="text-align:center">How to add a service type</h4>
+   	{$tutorial_1}
+    <hr />
+    <h4 style="text-align:center">How to add a new stylist and a new speciality</h4>
+    {$tutorial_2}
+    <hr />
+    <h4 style="text-align:center">How to add a gallery photo</h4>
+    {$tutorial_3}
+HTML;
+    echo $html;
+}
+
+function wpse_46445_make_link1($atts, $content = null) 
+{
+
+	// $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
+    $yt    = "https://share.vidyard.com/watch/V3nWVnbedzUCmDMPauYtoh?{$atts['id']}";
+    $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
+    $html  = <<<HTML
+        <!-- The script tag should live in the head of your page if at all possible -->
+		<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+
+		<!-- Put this wherever you would like your player to appear -->
+		<img
+		style="width: 100%; margin: auto; display: block;"
+		class="vidyard-player-embed"
+		src="https://play.vidyard.com/V3nWVnbedzUCmDMPauYtoh.jpg"
+		data-uuid="V3nWVnbedzUCmDMPauYtoh"
+		data-v="4"
+		data-type="inline"
+	/>
+HTML;
+    return $html;
+}
+function wpse_46445_make_link2($atts, $content = null) 
+{
+    // $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
+    $yt    = "https://share.vidyard.com/watch/s7iw8ce4niHqg8aVMrGcHo?{$atts['id']}";
+    $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
+    $html  = <<<HTML
+        <!-- The script tag should live in the head of your page if at all possible -->
+		<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+
+		<!-- Put this wherever you would like your player to appear -->
+		<img
+		style="width: 100%; margin: auto; display: block;"
+		class="vidyard-player-embed"
+		src="https://play.vidyard.com/s7iw8ce4niHqg8aVMrGcHo.jpg"
+		data-uuid="s7iw8ce4niHqg8aVMrGcHo"
+		data-v="4"
+		data-type="inline"
+	/>
+HTML;
+    return $html;
+}
+function wpse_46445_make_link3($atts, $content = null) 
+{
+    // $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
+    $yt    = "https://share.vidyard.com/watch/vm1oBNGW2MtAEQVXg2ovz8?{$atts['id']}";
+    $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
+    $html  = <<<HTML
+        <!-- The script tag should live in the head of your page if at all possible -->
+		<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+
+		<!-- Put this wherever you would like your player to appear -->
+		<img
+		style="width: 100%; margin: auto; display: block;"
+		class="vidyard-player-embed"
+		src="https://play.vidyard.com/vm1oBNGW2MtAEQVXg2ovz8.jpg"
+		data-uuid="vm1oBNGW2MtAEQVXg2ovz8"
+		data-v="4"
+		data-type="inline"
+	/>
+HTML;
+    return $html;
+}
