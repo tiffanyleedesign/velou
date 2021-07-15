@@ -186,7 +186,7 @@ function velou_scripts() {
 	/*--- Lightbox ---*/
 	// Lightbox CSS 
 		wp_enqueue_style( 
-			'lightgallery-styles', get_template_directory_uri() .'/css/lightgallery.css', array(), _S_VERSION, true
+			'lightgallery-styles', get_template_directory_uri() .'/css/lightgallery.css', array(), _S_VERSION
 		);
 
 	// Lightbox code bundle

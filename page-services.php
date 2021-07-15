@@ -48,7 +48,7 @@ get_header();
 						?> 
 						<article class="accordion-menu">
 
-							<div class="accordion-header"><h3><?php the_title();  ?></h3><span class="acc-icon"></span></div>
+							<button class="accordion-header"><h3><?php the_title();  ?></h3><span class="acc-icon"></span></button>
 							
 							<div class="accordion-content">
 								<?php

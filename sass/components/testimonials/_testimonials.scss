@@ -1,5 +1,6 @@
 .testimonial {
-    position: relative;    
+    position: relative;
+    top: -5rem;    
     width: 100%;
     margin: 0 auto;
     .block{
@@ -21,7 +22,7 @@
             position: relative;
             color: $color__text-main;
             font-family: $font__heading;
-            top: -5rem;
+            top: -6rem;
             left: 5rem;
             font-size: 1.7rem;
             font-weight: 400;
@@ -41,7 +42,7 @@
        height:auto;
        padding-bottom: 1rem;
    }
-    .swiper-container{
+    .swiper-container, .testimonial-swiper{
         position: relative;
         top: -13rem;
         right: 0;
@@ -119,7 +120,7 @@
         .swiper-button-prev{
             display: block;
         }
-        .swiper-container{
+        .swiper-container, .testimonial-swiper {
             margin: 0 auto;
             top: -20rem;
             background-color: transparent;
@@ -141,7 +142,7 @@
     }
 
     @media screen and (min-width: $desktop){
-        .swiper-container{
+        .swiper-container, .testimonial-swiper{
             top: -19rem;
         }
         svg{

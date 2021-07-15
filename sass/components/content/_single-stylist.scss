@@ -21,6 +21,7 @@
            display: inline-flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            text-align: center;
             .portfolio{            
                 width: 48%;
                 img{
@@ -49,7 +50,16 @@
         a:visited,
         a:focus {
             color: $color__text-main;                
-            padding:0 1rem;
+            padding:2rem;
+        }
+        a{
+            h4,
+            p{
+                padding: 0 2rem;
+            }
+            img{
+                margin-left: 2rem;
+            }
         }
         .prev-stylist,
         .next-stylist{          
@@ -57,6 +67,12 @@
                 width: 100px;
                 height: 100px;
             }
+        }
+        .prev-stylist{
+            text-align: left;
+        }
+        .next-stylist{
+            text-align: right;
         }
         
     }
@@ -111,6 +127,9 @@
         }
         .testimonial{
             margin-top: 10rem;
+        }
+        .stylist-portfolio{
+            text-align: center;
         }
        
     }
