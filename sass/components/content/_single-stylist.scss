@@ -35,10 +35,18 @@
 
     .bio{
         margin: 5rem auto;
+        .cta-book-now{
+            position: relative;
+            top: 3rem;
+            left: 0;
+            margin: 4rem auto;
+            border-radius: 0;
+            padding: 1rem 3rem;
+        }
     }
-
-    .cta-solid{
-        margin: 4rem auto;
+    .testimonial{
+        position: relative;
+        top: 2rem;
     }
     .post-navigation{
         width: 100%;
@@ -125,9 +133,10 @@
                  margin: 3rem;
             }
         }
-        .testimonial{
-            margin-top: 10rem;
-        }
+        // .testimonial{
+        //     position: relative;
+        //     top: 10rem;
+        // }
         .stylist-portfolio{
             text-align: center;
         }

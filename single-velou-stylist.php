@@ -46,12 +46,8 @@ get_header();
 						<?php
 						}
 					}?>
-					<!-- Book Now CTA -->
-				
-			
-					<div class="cta-solid">
-						<a href="<?php echo get_permalink(294); ?>">Book Now</a>
-					</div>
+					<!-- Book Now CTA -->						
+					<a class="cta-book-now" href="<?php echo get_permalink(294); ?>">Book Now</a>
 				</article>
 			</section>	
 
@@ -116,9 +112,7 @@ get_header();
 							foreach($portfolio as $post) :
 								setup_postdata($post); ?>
 								<article class="portfolio">
-									<a href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail('medium'); ?>
-									</a>
+									<?php the_post_thumbnail('medium'); ?>
 								</article>		
 							<?php 
 							endforeach;

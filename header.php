@@ -69,7 +69,6 @@
 
 		<!-- Book Now CTA -->
 
-		<div class="cta-book-now">
-			<a href="<?php echo get_permalink(294); ?>"> Book Now </a>
-		</div>
+		<a class="cta-book-now" href="<?php echo get_permalink(294); ?>"> Book Now </a>
+		
 	</header><!-- #masthead -->

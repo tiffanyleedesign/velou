@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: $color__link;
+  color: $color__text-main;
 
   &:visited {
     color: $color__link-visited;
@@ -39,16 +39,23 @@ a {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   z-index: 99;
   transition: all 0.3s ease-in-out;
-
-  a {
-    color: $color__button-text2;
-  }
+  color: $color__button-text2;
 
   &:hover,
   &:focus,
   &:active {
     @include cta-hover;
     border: none;
+  }
+  &:visited,   
+  &:focus,
+  &:active {
+      color: $color__button-text2;
+  }
+  &:hover{
+    background-color: $color__button1;
+    color: $color__link-hover;
+    border: 2px solid $color__background-accent3;
   }
 }
 
@@ -57,10 +64,10 @@ a {
   margin: 0 auto;
   color: $color__button-text1;
   border: 2px solid $color__button2;
-
-  a {
-    color: $color__button-text1;
-  }
+  
+  &:visited {color:$color__button2;} /* Visited link    */
+  &:hover {color: $color__button-text2;}   /* Mouse over link */
+  &:active {color:$color__button2;}  /* Selected link   */
 
   &:hover,
   &:focus,
@@ -75,16 +82,14 @@ a {
   background-color: $color__button2;
   padding: 0.8rem 1rem;
 
-  a {
-    color: $color__button-text2;
-  }
-
-  &:hover,
+  &:visited,   
   &:focus,
   &:active {
-    background-color: $color__button3;
-    a {
-      color: $color__text-main;
-    }
+      color: $color__button-text2;
+  }
+  &:hover{
+    background-color: transparent;
+    color: $color__button2;
+    border: 2px solid $color__background-accent3;
   }
 }

@@ -67,10 +67,9 @@ get_header();
 									<p><?php the_field('short_profile'); ?> </p> 		
 								<?php }?>
 								</div>
-							<?php }?>	
-							<div class="cta-solid">
-								<a href="<?php the_permalink(); ?>">View Profile</a>
-							</div>
+							<?php }?>							
+							<a class="cta-solid" href="<?php the_permalink(); ?>">View Profile</a>
+						
 						</article>		
 					<?php endwhile; ?>
 						</div>
@@ -86,9 +85,8 @@ get_header();
 
 		<!-- Services CTA -->
 		<section class="home-services">
-			<div class="cta-solid">
-				<a href="<?php echo get_permalink(106); ?>">Our Services</a>
-			</div>
+		<a class="cta-solid" href="<?php echo get_permalink(106); ?>">Our Services</a>
+		
 		</section>
 
 	<div class="wrapper">

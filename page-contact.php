@@ -91,9 +91,9 @@ get_header();
 					</div>
 						
 						<!-- FAQ CTA -->
-						<div class="cta-hollow">
-							<a href="<?php echo get_permalink(12); ?>">FAQ</a>
-						</div>
+						
+						<a class="cta-hollow" href="<?php echo get_permalink(12); ?>">FAQ</a>
+						
 					</div>
 
 					<div class="contact-section">

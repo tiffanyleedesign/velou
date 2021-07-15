@@ -24,7 +24,7 @@ get_header();
 						<?php the_post_thumbnail('large');	?>
 					</div>
 					<div class="page-hero">
-						<div class="page-title">
+						<div class="title">
 							<h1>The Velou</h1>
 						</div>
 						<section class="mission">
@@ -151,13 +151,10 @@ get_header();
 			<section class="cta">	
 				<div class="inner-cta">
 					<!-- Contact Us CTA -->
-					<div class="cta-solid cta-contact">
-						<a href="<?php echo get_permalink(37); ?>">Contact Us</a>
-					</div>
+					<a class="cta-solid cta-contact" href="<?php echo get_permalink(37); ?>">Contact Us</a>
+					
 					<!-- FAQ CTA -->
-					<div class="cta-hollow cta-faq">
-						<a href="<?php echo get_permalink(12); ?>">FAQ</a>
-					</div>
+					<a class="cta-hollow cta-faq" href="<?php echo get_permalink(12); ?>">FAQ</a>				
 				</div>
 			</section>
 		</div>	

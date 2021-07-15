@@ -102,9 +102,12 @@
             }
             .page-hero{
                 width: 50%;
+                h1{
+                    font-size: 3rem;
+                }
                 p{
                     text-align: left;
-                    padding: 3rem;;
+                   
                 }
             }
         }
@@ -125,22 +128,16 @@
             .cta-hollow{
                 margin: .5rem;
             }
+            
         }
     }
 
     @media screen and (min-width: $desktop){
         .page-title{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .page-thumbnail{
-                width: 50%;
-            }
             .page-hero{
-                width: 50%;
                 p{
-                    text-align: left;
-                    padding: 3rem;
+                    width: 24rem;
+                    margin: 0 auto;
                 }
             }
         }

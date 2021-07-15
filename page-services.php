@@ -102,17 +102,13 @@ get_header();
 				?>		
 			</section>
 
-			<!-- Book Now CTA -->
-			<section class="cta">
-				<div class="inner-cta">
-					<div class="cta-solid">
-						<a href="<?php echo get_permalink(294); ?>">Book Now</a>
-					</div>
 			
-					<!-- FAQ CTA -->
-					<div class="cta-hollow">
-						<a href="<?php echo get_permalink(12); ?>">FAQ</a>
-					</div>
+			<section class="cta">
+				<div class="inner-cta">	
+					<!-- Book Now CTA -->				
+					<a class="cta-solid" href="<?php echo get_permalink(294); ?>">Book Now</a>
+					<!-- FAQ CTA -->				
+					<a class="cta-hollow" href="<?php echo get_permalink(12); ?>">FAQ</a>				
 				</div>
 			</section>
 			

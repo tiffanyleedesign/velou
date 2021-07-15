@@ -62,6 +62,11 @@
         .cta-solid{
             position: relative;
             top:-14rem;
+            left: 20%;
+            color: $color__background-body;
+            &:hover{
+                color: $color__text-main;
+            }
         }
 
         .swiper-pagination{
@@ -89,6 +94,7 @@
     }
 
     .home-services{
+        text-align: center;
         position: relative;
         top: -7rem;
         width: 100%;
@@ -98,18 +104,16 @@
         background-size: cover;
         background-repeat: no-repeat;
         .cta-solid{
+            color: $color__background-body;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
-        }
-    }
-    @media screen and (min-width: $mobile){
-        .stylist{
-            .cta-solid{
-                left: -10%
+            &:hover{
+                color: $color__text-main;
             }
         }
     }
+    
     
     
 
@@ -159,7 +163,7 @@
                 
             }
             .cta-solid{
-                left: -7%;
+                left: 32%;
                 top: -15rem;
             }
             .swiper-button-next{
@@ -190,7 +194,7 @@
             }
            .cta-solid{
                 width:12rem;
-                left: 5%;
+                left: 55%;
                 top: -30rem;
             }
         }
@@ -262,7 +266,9 @@
                 left: 25%;
             }
         .swiper-slide{
-           
+           .cta-solid{
+               left:40%;
+           }
             .short-profile{
             width: 40rem;
             left: 35%;
