@@ -54,11 +54,9 @@
 .page-id-37 {
   .cta-hollow {
     text-align: center;
-    position: relative;
-    margin-top: 2rem;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 5rem;
-    left: 46%;
-    padding: 1rem 3rem;
   }
 }
 
@@ -73,6 +71,26 @@
     font-size: 2rem;
   }
 
+  // Form text input
+  .forminator-design--flat {
+    .forminator-input {
+      background-color: $color__background-base3;
+      color: $color__background-accent3;
+      height: 50px;
+
+      &:active {
+        color: $color__;
+      }
+    }
+
+    // Form textarea input
+    .forminator-textarea {
+      background-color: $color__background-base3;
+      color: $color__background-accent3;
+      height: 300px;
+    }
+  }
+
   .forminator-ui#forminator-module-365.forminator-design--flat
     .forminator-button-submit {
     width: 200px;
@@ -82,42 +100,21 @@
     display: flex;
     justify-content: center;
   }
-  .forminator-ui#forminator-module-365.forminator-design--flat
-    .forminator-button-submit {
-    background-color: $color__hover-focus;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $color__text-input;
-    }
-  }
-
-  // Form text input
-  #forminator-module-365.forminator-design--flat .forminator-input,
-  #forminator-module-365.forminator-design--flat .forminator-input:hover,
-  #forminator-module-365.forminator-design--flat .forminator-input:focus,
-  #forminator-module-365.forminator-design--flat .forminator-input:active {
-    background-color: $color__background-base3;
-    color: $color__background-accent3;
-    height: 50px;
-  }
-  // Form textarea input
-  #forminator-module-365.forminator-design--flat .forminator-textarea,
-  #forminator-module-365.forminator-design--flat .forminator-textarea:hover,
-  #forminator-module-365.forminator-design--flat .forminator-textarea:focus,
-  #forminator-module-365.forminator-design--flat .forminator-textarea:active {
-    background-color: $color__background-base3;
-    color: $color__background-accent3;
-    height: 300px;
-  }
 }
 
 // image next to form (desktop view only)
 .contact-section {
   .contact-img {
     display: none;
+    object-fit: cover;
+    width: 100%;
   }
 
+  @media screen and (min-width: $tablet) {
+    .contact-form {
+      padding: 2rem 3.5rem;
+    }
+  }
   @media screen and (min-width: $desktop) {
     display: flex;
     .contact-form {
