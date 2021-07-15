@@ -114,7 +114,6 @@
                 text-align: left;
                 h1{
                     font-size: 3rem;
-                    width: 24rem;
                     margin: 0.67rem auto;
                 }
                 p{
@@ -146,6 +145,10 @@
 
     @media screen and (min-width: $desktop){
         .page-title{
+
+            h1 {
+                width: 24rem;
+            }
             .page-hero{
                 p{
                     width: 24rem;
