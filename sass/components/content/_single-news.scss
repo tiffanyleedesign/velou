@@ -1,6 +1,6 @@
-// Single News
-.entry-header {
-	font-family: $font__heading;
+.single-post{    // Single News
+    .entry-header {
+    font-family: $font__heading;
     padding-bottom: 1.5rem;
     width: 80%;
     margin: 0 auto;
@@ -15,16 +15,21 @@
         font-weight: lighter;
     }
 
-}
+    }
 
-.entry-content {
-    p {
+    .entry-content {
+    p,
+    ol, ul{
         width: 80%;
         margin: 0 auto;
     }
-}
+    ol, ul{
+        margin-top: 1rem;
+    }
 
-.return {
+    }
+
+    .return {
     width: 50%;
     margin: 0 auto;
     padding: 1rem 0 5rem 0;
@@ -32,9 +37,9 @@
         width: 10%;
         margin: 0 auto;
     }
-}
+    }
 
-.home-blog {
+    .home-blog {
     font-family: $font__heading;
     border-top: 2px solid $color__background-accent2;
     border-bottom: 2px solid $color__background-accent2;
@@ -62,21 +67,27 @@
         font-weight: lighter;
         padding-bottom: 1.25rem;
     }
-}
+    }
 
-@media screen and (min-width: $tablet) {
+    @media screen and (min-width: $tablet) {
     .post-thumbnail {
         width: 80%;
         margin: 0 auto;
         img {
-            height:400px;
+            width: 100%;
+            margin: 0 auto;
         }
     }
-    
-    .entry-content p {
-        padding: 0 5rem 0 5rem;
-    }
 
+    .entry-content {
+        p{
+            padding: 0 3rem;
+        }
+
+        ol, ul {
+            padding: 0 5rem;
+        }
+    }
     .return {
         padding: 0 0 5rem 0;
         text-align: center;
@@ -106,19 +117,23 @@
             }
         }
     }
-}
+    }
 
-@media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
     .post-thumbnail {
         width: 80%;
         margin: 0 auto;
-        img {
-            height:400px;
-        }
+        
     }
-    
-    .entry-content p {
-        padding: 0 5rem 0 5rem;
+
+    .entry-content {
+        p {
+        padding: 0 2rem;
+        }
+        ol, 
+        ul{
+            padding: 0 7rem;
+        }
     }
 
     .return {
@@ -157,12 +172,18 @@
             }
         }
     }
-}
+    }
 
-@media (min-width:$desktopWide) {
-    .home-blog {
-        span {
-            left: 40%;
+    @media (min-width:$desktopWide) {
+        .home-blog {
+            span {
+                left: 45%;
+            }
+        }
+        .entry-content {
+            width:70%;
+            margin: 2rem auto;
+            
         }
     }
 }

@@ -1,11 +1,16 @@
 .page-id-2{
-    margin-right: 1rem;
-    .mission{
-        margin: 2rem;
+    .page-title{
         text-align: center;
-        h2{
-            font-size: 2rem;;
-        }
+        svg{
+            width: 10rem;  
+            margin: 2rem auto;      
+        } 
+    }
+    .mission{
+        text-align: center;
+        p{
+            font-size: 1rem;
+        }        
     }
     .stylist{
         position: relative;    
@@ -37,7 +42,7 @@
         .short-profile{
             font-size: 1rem;
             position: relative;
-            left: 27%;
+            left: 15%;
             top: -9rem;
             background-color: rgba(237, 232, 229, .86);
             height: 15rem;            
@@ -54,9 +59,8 @@
             left: 90%;
             color: $color__background-base1;
         }
-        .cta-hollow{
+        .cta-solid{
             position: relative;
-            left: 5%;
             top:-14rem;
         }
 
@@ -65,7 +69,7 @@
             text-align: left;
             margin-left: 2rem;
             position: relative;
-            top:-3rem;
+            top:-12rem;
             .swiper-pagination-bullet{
                 margin: .5rem;
                 width: 15px;
@@ -79,6 +83,8 @@
     }
 
     .home-services{
+        position: relative;
+        top: -10rem;
         width: 100%;
         height: 30rem;
         background-image: url(https://velou.bcitwebdeveloper.ca/wp-content/uploads/2021/06/christiann-koepke-dQyS2pMYtok-unsplash.jpg);
@@ -91,13 +97,21 @@
             transform: translateY(-50%);
         }
     }
+    @media screen and (min-width: $mobile){
+        .stylist{
+            .cta-solid{
+                left: -10%
+            }
+        }
+    }
     
     
 
     @media screen and (min-width: $tablet){
-        .intro{
+        .page-hero{
             display: flex;
             justify-content: center;
+            flex-direction: initial;
             align-items: center;
             .hero{
                 width: 50%;
@@ -105,8 +119,11 @@
                     height:40rem;
                 }
             }
+            .page-title{
+                padding-left: 2rem;
+            }
             .mission{
-                width: 50%;
+               
                 p{
                     text-align: left;
                 }
@@ -127,16 +144,16 @@
                 height: 30rem;
             }
             h3{
-                top: -5rem;
+                
                 text-align: center;
-                left:-10%;
+                left:-8%;
             }
             p{
                 position: relative;
                 
             }
-            .cta-hollow{
-                left: -9%;
+            .cta-solid{
+                left: -7%;
                 top: -15rem;
             }
             .swiper-button-next{
@@ -155,14 +172,14 @@
     @media screen and (min-width: $desktop){
         .swiper-slide{
             .short-profile{
-                left: 40%;
+                left: 50%;
                 top: -25rem;
                 width: 25rem;
                 padding-left: 3rem;
             }
-           .cta-hollow{
+           .cta-solid{
                 width:12rem;
-                left: 3%;
+                left: 5%;
                 top: -30rem;
             }
         }
@@ -171,7 +188,7 @@
             h2{
                 position: relative;
                 top: 10rem;
-                left: 20%;
+                left: 30%;
             }
             h3{
                 left: -32%;
@@ -179,8 +196,8 @@
                 font-size: 2.5rem;
             }
             img{
-                height:35rem;
-                width: 28rem;
+                height: 40rem;
+                width: 35rem;
             }
             .swiper-button-next{
                 top: -45rem;
@@ -204,26 +221,27 @@
 
     @media screen and (min-width: $desktopWide){
 
-        .intro{
-            .hero{
-            img{
-                height: 50rem;
-            }
+        .page-hero{
+            p{
+                margin: 0 auto;
             }
         }
         
         .mission{
             p{
                 text-align: left;
-                width: 30rem;
-                margin: 0 auto;
+                width: 25rem;
+                
             }
         }
-        
+         .stylist h2{
+                left: 25%;
+            }
         .swiper-slide{
+           
             .short-profile{
             width: 40rem;
-            left: 32%;
+            left: 35%;
             padding-left: 4rem;
             }
         }
