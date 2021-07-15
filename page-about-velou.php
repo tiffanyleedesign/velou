@@ -25,7 +25,7 @@ get_header();
 					</div>
 					<div class="page-hero">
 						<div class="page-title">
-							<h1>The Velou Hair Boutique</h1>
+							<h1>The Velou</h1>
 						</div>
 						<section class="mission">
 							<?php 

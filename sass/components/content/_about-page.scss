@@ -20,9 +20,8 @@
         }
         .stylists{
             margin: 2rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: block;
+            
             p{
                 text-align: center;
                 padding: 0 2rem;
@@ -33,7 +32,7 @@
                 object-fit: cover;
             }
             .one-stylist{
-                width: 48%;
+                width: 100%;
                 margin: 2rem 0;
                 text-align: left;
                 h3{
@@ -60,6 +59,10 @@
             }
         }      
     }
+    .testimonial{
+        position: relative;
+        top: 2rem;
+    }
     .cta{
         height: 15rem;
         background-color: $color__background-accent4;
@@ -68,6 +71,21 @@
             position: relative;
             top: 4rem;
             margin-top: 1rem;
+        }
+    }
+
+    @media screen and (min-width: $mobile){
+        .stylists-section{
+            .stylists{
+                 display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                .one-stylist{ 
+                    width: 45%;
+                    margin: 2rem 0;
+                   
+                }           
+            }   
         }
     }
 
@@ -97,6 +115,7 @@
                 margin: 2rem auto;;
             }
         }
+       
         .inner-cta{
             display: flex;
             justify-content: space-around;
