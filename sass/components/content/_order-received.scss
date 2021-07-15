@@ -2,6 +2,10 @@
     .page-content, .entry-content, .entry-summary{
         margin-top: 0;
     } 
+
+    .woocommerce-customer-details{
+        display: none;
+    }
     
     
     .site-main{
@@ -10,7 +14,7 @@
         padding: 2rem;   
             .post-18{
             .entry-header{
-                width: 14rem;
+                width: 20rem;
                 margin: 0 auto;
             } 
         }      
