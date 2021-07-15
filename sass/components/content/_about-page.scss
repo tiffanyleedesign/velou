@@ -4,12 +4,18 @@
         margin-top: 2rem;;
         svg{
             width: 10rem;        
-        }        
+        }
+
+        .title{
+            margin: 2rem;
+        }
+
+        .mission{
+            margin: 2rem;
+            text-align: center;
+        }
     }
-    .mission{
-        margin: 2rem;
-        text-align: center;
-    }
+    
     .stylists-section{
         margin: 7rem 0;
         h2{
@@ -90,6 +96,9 @@
     }
 
     @media screen and (min-width: $tablet){
+        .wrapper {
+            padding: 0;
+        }
         .page-hero{
             display: block;
         }
@@ -102,17 +111,20 @@
             }
             .page-hero{
                 width: 50%;
+                text-align: left;
                 h1{
                     font-size: 3rem;
+                    width: 24rem;
+                    margin: 0.67rem auto;
                 }
                 p{
                     text-align: left;
-                   
                 }
             }
         }
         .stylists-section{
             text-align: center;
+            padding: 0 2rem;
             p{
                 width: 50%;
                 margin: 2rem auto;;
@@ -144,7 +156,7 @@
         .stylists-section{
             .stylists{
                 .one-stylist{
-                    width: 20%;
+                    width: 23%;
                 }
             }           
         }
