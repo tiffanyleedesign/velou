@@ -4,6 +4,10 @@
         margin: auto;
         padding: 3rem 2rem 3rem;
 
+        .return-home {
+            font-size: 1.125rem;
+            text-decoration: underline;
+        }
 
         .search-form {
             label {
@@ -40,6 +44,8 @@
                 cursor: pointer;
             }
         }
+
+        
 
         .widget-container {
             margin: 3rem auto;
