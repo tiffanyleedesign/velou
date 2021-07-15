@@ -5,4 +5,10 @@
 	select {
 		max-width: 100%;
 	}
+
+	&.jr-insta-slider {
+		.widget-title {
+			margin: 1.25 2rem;
+		}
+	}
 }

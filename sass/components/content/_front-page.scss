@@ -14,6 +14,18 @@
     }
     .swiper-container{
         width: 100%;
+
+        .swiper-pagination-bullet {
+            &:focus {
+                outline: dotted 1px black;
+            }
+        }
+
+        .swiper-button-next {
+            &:focus-visible {
+                outline: dotted 1px black;
+            }
+        }
     } 
     .stylist{
         position: relative;    
@@ -21,7 +33,7 @@
        
         h2{
             width: 13rem;
-            margin: 0 auto;
+            margin: 5rem auto 0;
             text-align: center;
             font-size: 2rem;
         }
@@ -86,6 +98,11 @@
                 background-color: transparent;
                 color: $color__text-main;
                 opacity: 1;
+
+                &:focus {
+                    outline: none;
+                    text-decoration: underline;
+                }
             }
             .swiper-pagination-bullet-active{
                 font-size: 1.75rem;
@@ -142,8 +159,9 @@
         }
         .stylist{
             position: relative;
-            top: 5rem;
+            top: 0rem;
             text-align: left;
+
 
             .short-profile{
                 top:-10rem;
