@@ -55,7 +55,7 @@ a {
   &:hover{
     background-color: $color__button1;
     color: $color__link-hover;
-    border: 2px solid $color__background-accent3;
+    // border: 2px solid $color__background-accent3;
   }
 }
 
@@ -81,7 +81,7 @@ a {
   margin: 0 auto;
   background-color: $color__button2;
   padding: 0.8rem 1rem;
-
+  border: 2px solid $color__button2;
   &:visited,   
   &:focus,
   &:active {

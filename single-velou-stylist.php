@@ -52,8 +52,6 @@ get_header();
 			</section>	
 
 			<!-- Testimonial Section -->
-
-			<section class="testimonial">
 				
 					<?php				
 					$args = array(
@@ -99,7 +97,6 @@ get_header();
 				wp_reset_postdata();
 				endif;			
 				?>	
-			
 
 			<!-- Portfolio Relationship Field and assign it to the Single Stylist Page -->
 			<section class="stylist-portfolio">	

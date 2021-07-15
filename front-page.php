@@ -57,8 +57,7 @@ get_header();
 				<div class="swiper-container stylist-swiper">
 					<div class="swiper-wrapper">						
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-						<article class="swiper-slide">
-							
+						<article class="swiper-slide">							
 							<?php the_post_thumbnail('medium'); ?>
 							<h3><?php the_title(); ?></h3>
 							<?php if(function_exists('get_field')){?>
@@ -69,7 +68,6 @@ get_header();
 								</div>
 							<?php }?>							
 							<a class="cta-solid" href="<?php the_permalink(); ?>">View Profile</a>
-						
 						</article>		
 					<?php endwhile; ?>
 						</div>

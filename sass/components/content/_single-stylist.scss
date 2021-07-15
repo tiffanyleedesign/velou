@@ -13,6 +13,16 @@
     .stylist-photo-medium{
         display: none;
     }
+
+   .testimonial{
+       position: relative;
+       top: 2rem;
+        .swiper-button-next,
+        .swiper-button-prev{
+            display: none;
+        }
+    }
+
     .stylist-portfolio,
     .colored-background{
         position: relative;
