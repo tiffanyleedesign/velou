@@ -58,7 +58,7 @@ get_header();
 					<div class="swiper-wrapper">						
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<article class="swiper-slide">							
-							<?php the_post_thumbnail('medium'); ?>
+							<?php the_post_thumbnail('large'); ?>
 							<h3><?php the_title(); ?></h3>
 							<?php if(function_exists('get_field')){?>
 								<div class="short-profile">

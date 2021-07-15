@@ -147,14 +147,11 @@ get_header();
 				</div>
 			</section>
 
-			<!-- CTA Section -->
+			
 			<section class="cta">	
-				<div class="inner-cta">
-					<!-- Contact Us CTA -->
-					<a class="cta-solid cta-contact" href="<?php echo get_permalink(37); ?>">Contact Us</a>
-					
-					<!-- FAQ CTA -->
-					<a class="cta-hollow cta-faq" href="<?php echo get_permalink(12); ?>">FAQ</a>				
+				<div class="inner-cta">					
+					<a class="cta-solid" href="<?php echo get_permalink(37); ?>">Contact Us</a>
+					<a class="cta-hollow" href="<?php echo get_permalink(12); ?>">FAQ</a>				
 				</div>
 			</section>
 		</div>	
