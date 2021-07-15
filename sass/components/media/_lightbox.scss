@@ -744,17 +744,27 @@
     padding: 1rem 2rem 2rem;
   }
   
-  // .lg-outer .lg-img-wrap {
-  //   width: 90%;
-  //   height: 90%;
-  //   top: 5%;
-  //   left: 5%;
-  //   background-color: white;
-  //   // padding: 2rem;
-  //   overflow: hidden;
-  // }
+  .lg-next, .lg-prev {
+    background-color: #9ba59e98;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #9ba59e56;
+    }
+    
+  }
 
   .lg-download {
     display: none;
+  }
+
+  button#lg-close-1 {
+    color: $color__background-base1;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $color__hover-focus;
+    }
   }
 }
