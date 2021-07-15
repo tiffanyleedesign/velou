@@ -15,7 +15,7 @@
     .stylist{
         position: relative;    
         text-align: left;
-        .swiper-container{
+        .swiper-stylist-container{
             width: 100%;
         } 
         h2{
@@ -66,25 +66,31 @@
 
         .swiper-pagination{
             display: inline-flex;
-            text-align: left;
-            margin-left: 2rem;
+            align-items: flex-end;
+            text-align: center;
             position: relative;
-            top:-12rem;
+            top:-11rem;
+            font-family: $font__heading;
+            color: $color__text-main;
+
             .swiper-pagination-bullet{
-                margin: .5rem;
-                width: 15px;
-                height: 15px;
-                
+                margin: .5rem 1rem;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                color: $color__text-main;
+                opacity: 1;
             }
             .swiper-pagination-bullet-active{
-                background-color: $color__background-base1;
+                font-size: 1.75rem;
+                padding-bottom: .25rem;
             }
         }
     }
 
     .home-services{
         position: relative;
-        top: -10rem;
+        top: -7rem;
         width: 100%;
         height: 30rem;
         background-image: url(https://velou.bcitwebdeveloper.ca/wp-content/uploads/2021/06/christiann-koepke-dQyS2pMYtok-unsplash.jpg);
@@ -163,7 +169,12 @@
             .swiper-pagination{
                 .swiper-pagination-bullet{                    
                     position: relative;
-                    top: -10rem;                   
+                    top: -2rem;
+                    left: 3rem;
+                }
+
+                .swiper-pagination-bullet-active {
+                    font-size: 2rem;
                 }
             }
         }
@@ -205,8 +216,21 @@
             }
             .swiper-pagination{
                 top: -12rem;
-                left: 70%;
+                left: 60%;
+
+                .swiper-pagination-bullet {
+                    top: -13rem;
+                    font-size: 1.125rem;
+                    margin: 1.125rem;
+                }
+
+                .swiper-pagination-bullet-active {
+                    font-size: 2.125rem;
+                    padding-bottom: .3rem
+                }
             }
+
+
         }
         .home-services{
            .cta-solid{
@@ -243,6 +267,24 @@
             width: 40rem;
             left: 35%;
             padding-left: 4rem;
+            }
+        }
+
+        .stylist {
+            .swiper-pagination{
+                top: -12rem;
+                left: 65%;
+
+                .swiper-pagination-bullet {
+                    top: -13rem;
+                    font-size: 1.375rem;
+                    margin: 1.25rem;
+                }
+
+                .swiper-pagination-bullet-active {
+                    font-size: 2.5rem;
+                    padding-bottom: .35rem
+                }
             }
         }
     }

@@ -97,7 +97,7 @@ get_header();
 						<h2 class="testimonial-title">Customer Reviews</h2>
 					</div>	
 					
-					<div class="swiper-container">
+					<div class="swiper-container testimonial-swiper">
 						<div class="swiper-wrapper">
 
 							<?php while ( $query->have_posts() ) : $query->the_post(); ?>

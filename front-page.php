@@ -54,7 +54,7 @@ get_header();
 		if ( $query->have_posts() ){ ?>
 			<section class="slider stylist">
 				<h2>Our Award Winning Team</h2>
-				<div class="swiper-container">
+				<div class="swiper-container stylist-swiper">
 					<div class="swiper-wrapper">						
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<article class="swiper-slide">
@@ -110,7 +110,7 @@ get_header();
 					<h2 class="testimonial-title">Customer Reviews</h2>
 				</div>	
 				
-				<div class="swiper-container">
+				<div class="swiper-container testimonial-swiper">
 					<div class="swiper-wrapper">
 
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>

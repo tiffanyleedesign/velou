@@ -42,7 +42,7 @@
        height:auto;
        padding-bottom: 1rem;
    }
-    .swiper-container{
+    .swiper-container, .testimonial-swiper{
         position: relative;
         top: -13rem;
         right: 0;
@@ -120,7 +120,7 @@
         .swiper-button-prev{
             display: block;
         }
-        .swiper-container{
+        .swiper-container, .testimonial-swiper {
             margin: 0 auto;
             top: -20rem;
             background-color: transparent;
@@ -142,7 +142,7 @@
     }
 
     @media screen and (min-width: $desktop){
-        .swiper-container{
+        .swiper-container, .testimonial-swiper{
             top: -19rem;
         }
         svg{
