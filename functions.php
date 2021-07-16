@@ -381,3 +381,13 @@ function wpse_46445_make_link3($atts, $content = null)
 HTML;
     return $html;
 }
+
+function edu_post_filter( $use_block_editor, $post ) {    
+    $page_ids = array(  2, 21, 111, 106 );
+    if ( in_array( $post->ID, $page_ids ) ) {
+        return false;
+    } else {
+        return $use_block_editor;
+    }
+}
+add_filter( 'use_block_editor_for_post', 'edu_post_filter', 10, 2 );
