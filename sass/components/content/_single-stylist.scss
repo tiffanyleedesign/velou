@@ -52,10 +52,7 @@
             padding: 1rem 3rem;
         }
     }
-    .testimonial{
-        position: relative;
-        top: 2rem;
-    }
+    
     .post-navigation{
         width: 100%;
         margin: 0;
@@ -141,6 +138,7 @@
         }
         .stylist-portfolio{
             text-align: center;
+            top: 2%;
         }       
     }
 
@@ -173,6 +171,9 @@
                 width: 20rem;
                 height: 20rem;
             }
+        }
+        .testimonial{
+            top: 7rem;
         }
     }   
 }
