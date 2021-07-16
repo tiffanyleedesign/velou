@@ -37,7 +37,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 1.5rem;
-
     .news-list-title {
       font-size: 1.8rem;
     }
@@ -45,7 +44,6 @@
       width: 48%;
       border: 0.1px solid $color__background-accent1;
       margin-bottom: 3rem;
-
       img {
         max-width: 500px;
         max-height: 300px;
@@ -56,3 +54,35 @@
     }
   }
 }
+<<<<<<< Updated upstream
+=======
+// News Archive Page
+.archive.category {
+  .site-main {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    a {
+      font-family: $font__heading;
+      color: $color__text-input;
+    }
+
+    .entry-content {
+      a {
+        color: $color__text-screen;
+        font-family: $font__main;
+        font-weight: 600;
+      }
+    }
+    img,
+    p {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  .comments-link {
+    display: none;
+  }
+}
+>>>>>>> Stashed changes

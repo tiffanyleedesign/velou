@@ -5,7 +5,7 @@
         a:visited,
         a:focus {
         color: $color__text-main;
-    }
+        }
     }
     h1{
         margin-top: 0;
@@ -13,7 +13,6 @@
     .stylist-photo-medium{
         display: none;
     }
-
    .testimonial{
        position: relative;
        top: 2rem;
@@ -22,7 +21,6 @@
             display: none;
         }
     }
-
     .stylist-portfolio,
     .colored-background{
         position: relative;
@@ -91,10 +89,8 @@
         }
         .next-stylist{
             text-align: right;
-        }
-        
+        }        
     }
-
 
     @media screen and(min-width: $desktop){
         .name{
@@ -143,14 +139,9 @@
                  margin: 3rem;
             }
         }
-        // .testimonial{
-        //     position: relative;
-        //     top: 10rem;
-        // }
         .stylist-portfolio{
             text-align: center;
-        }
-       
+        }       
     }
 
     @media screen and (min-width: $desktopWide){
@@ -171,21 +162,17 @@
         }
         .stylist-photo-medium{
             left:20%;
-        }
-        
+        }        
         .stylist-portfolio{
             .portfolio-box{
                 .portfolio{
                 width: 20%;
-            }
-            }
-                        
+                }
+            }                        
             img{
                 width: 20rem;
                 height: 20rem;
             }
         }
-
-    }
-   
+    }   
 }

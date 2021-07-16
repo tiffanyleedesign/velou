@@ -33,9 +33,7 @@ get_header();
 			<!-- /* Start the Loop */ -->
 			<article class="single-blog">
 				<?php while ( have_posts() ) : the_post();?>
-
-					<div class="post-thumbnail-list">
-				
+					<div class="post-thumbnail-list">				
 						<?php the_post_thumbnail(); ?>
 						<div class="entry-content">				
 							<?php
@@ -43,13 +41,9 @@ get_header();
 							if ( $categories_list ) {
 								printf( '<span class="cat-news-list">' . esc_html__( '%1$s', 'velou' ) . '</span>', $categories_list ); 
 							} ?>
-							<a href="<?php the_permalink()?>">
-							<?php
-							the_title( '<h2 class="news-list-title">', '</h2>' ); ?>					
-							</a>
+							<a href="<?php the_permalink()?>"> <?php the_title( '<h2 class="news-list-title">', '</h2>' ); ?> </a>
 							<?php
 							the_excerpt();
-
 							?>
 						</div><!-- .entry-content -->
 					</div>
@@ -57,11 +51,8 @@ get_header();
 			
 			</article>
 			<?php the_posts_navigation();
-
 		else :
-
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif;
 		?>
 	</main><!-- #main -->

@@ -4,9 +4,7 @@ const swiper = new Swiper('.testimonial-swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        // renderBullet: function (index, className) {
-        //     // return '<span class="' + className + '">' + '01' + '</span>';
-        //   },
+       
     },
     navigation: {
         nextEl: '.swiper-button-next',

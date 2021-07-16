@@ -14,13 +14,11 @@
     }
     .swiper-container{
         width: 100%;
-
         .swiper-pagination-bullet {
             &:focus {
                 outline: dotted 1px black;
             }
         }
-
         .swiper-button-next {
             &:focus-visible {
                 outline: dotted 1px black;
@@ -29,8 +27,7 @@
     } 
     .stylist{
         position: relative;    
-        text-align: left;
-       
+        text-align: left;       
         h2{
             width: 13rem;
             margin: 5rem auto 0;
@@ -81,7 +78,6 @@
                 color: $color__text-main;
             }
         }
-
         .swiper-pagination{
             display: inline-flex;
             align-items: flex-end;
@@ -90,7 +86,6 @@
             top:-11rem;
             font-family: $font__heading;
             color: $color__text-main;
-
             .swiper-pagination-bullet{
                 margin: .5rem 1rem;
                 width: auto;
@@ -98,7 +93,6 @@
                 background-color: transparent;
                 color: $color__text-main;
                 opacity: 1;
-
                 &:focus {
                     outline: none;
                     text-decoration: underline;
@@ -130,10 +124,7 @@
                 color: $color__text-main;
             }
         }
-    }
-    
-    
-    
+    }    
 
     @media screen and (min-width: $tablet){
         .page-hero{
@@ -161,8 +152,6 @@
             position: relative;
             top: 0rem;
             text-align: left;
-
-
             .short-profile{
                 top:-10rem;
                 left: 29%;
@@ -172,14 +161,12 @@
             img{
                 height: 30rem;
             }
-            h3{
-                
+            h3{                
                 text-align: center;
                 left:-8%;
             }
             p{
-                position: relative;
-                
+                position: relative;                
             }
             .cta-solid{
                 left: 32%;
@@ -195,14 +182,12 @@
                     top: -2rem;
                     left: 3rem;
                 }
-
                 .swiper-pagination-bullet-active {
                     font-size: 2rem;
                 }
             }
         }
-    }
-    
+    }    
     @media screen and (min-width: $desktop){
         .swiper-slide{
             .short-profile{
@@ -217,8 +202,7 @@
                 top: -30rem;
             }
         }
-        .stylist{
-             
+        .stylist{             
             h2{
                 position: relative;
                 top: 10rem;
@@ -240,20 +224,16 @@
             .swiper-pagination{
                 top: -12rem;
                 left: 60%;
-
                 .swiper-pagination-bullet {
                     top: -13rem;
                     font-size: 1.125rem;
                     margin: 1.125rem;
                 }
-
                 .swiper-pagination-bullet-active {
                     font-size: 2.125rem;
                     padding-bottom: .3rem
                 }
             }
-
-
         }
         .home-services{
            .cta-solid{
@@ -261,24 +241,19 @@
            }
             position: relative;
             top: -10rem;
-
-        }
-        
+        }        
     }
 
     @media screen and (min-width: $desktopWide){
-
         .page-hero{
             p{
                 margin: 0 auto;
             }
-        }
-        
+        }        
         .mission{
             p{
                 text-align: left;
-                width: 25rem;
-                
+                width: 25rem;                
             }
         }
          .stylist h2{
@@ -294,18 +269,15 @@
             padding-left: 4rem;
             }
         }
-
         .stylist {
             .swiper-pagination{
                 top: -12rem;
                 left: 65%;
-
                 .swiper-pagination-bullet {
                     top: -13rem;
                     font-size: 1.375rem;
                     margin: 1.25rem;
                 }
-
                 .swiper-pagination-bullet-active {
                     font-size: 2.5rem;
                     padding-bottom: .35rem

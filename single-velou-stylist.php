@@ -120,14 +120,6 @@ get_header();
 				</article>	
 			</section>	
 
-			<?php 
-			// the_post_navigation(
-			// 	array(
-			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'velou' ) . '</span> <span class="nav-title">%title</span>',
-			// 	)
-			// );?>
-
 <div class="post-navigation">
 		<?php
 		$prev_post = get_previous_post();

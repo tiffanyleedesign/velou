@@ -108,17 +108,12 @@ get_header();
 				
 				<div class="swiper-container testimonial-swiper">
 					<div class="swiper-wrapper">
-
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					
+						<?php while ( $query->have_posts() ) : $query->the_post(); ?>					
 							<div class="swiper-slide">
 								<?php the_content(); ?>
-							</div>
-		
+							</div>		
 						<?php endwhile; ?>
-
 					</div>
-
 					<div class="swiper-pagination"></div>
 					<div class="swiper-button-prev"></div> 
 					<div class="swiper-button-next"></div>
@@ -128,13 +123,11 @@ get_header();
 			<?php wp_reset_postdata();
 		endif;?>
 
-
 		<!-- Brands Logo Section  -->
 
 		<section class="brands-section">
 				<h2>Brands We Use</h2>
-				<div class="image-display"><?php
-				
+				<div class="image-display"><?php				
 			
 					$args = array(
 					'post_type' 	=> 'velou-brand-list',
@@ -156,7 +149,6 @@ get_header();
 	<?php endwhile; // End of the loop.?>
 
 </main><!-- #main -->
-
 <?php
 get_sidebar();
 get_footer();

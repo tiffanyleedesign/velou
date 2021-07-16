@@ -2,12 +2,9 @@
     .page-content, .entry-content, .entry-summary{
         margin-top: 0;
     } 
-
     .woocommerce-customer-details{
         display: none;
-    }
-    
-    
+    }    
     .site-main{
         max-width: $max-width;
         margin: 0 auto;
@@ -42,12 +39,10 @@
                     text-align: right;
                 }     
             }
-
             tfoot td{
                 text-align: right;
                 font-weight: bold;
             }
-
             tbody .product-total{
                 text-align: right;
             }

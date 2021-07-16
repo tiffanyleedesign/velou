@@ -30,16 +30,13 @@ get_header();
 				'post_type'		=> 'velou-gallery',
 				'posts_per_page'	=> -1,
 			);
-
 			$query = new WP_Query ( $args );
 
 			$types = get_terms(
 				array(
 					'taxonomy' 	=> 'velou-service-type'
 				)
-			);
-
-			
+			);		
 			
 			if ( $query->have_posts() ){ ?>
 				<!-- Create Sorting Buttons -->
@@ -59,11 +56,10 @@ get_header();
 					<?php 
 					while ( $query->have_posts() ) : $query->the_post();
 						$terms = get_the_terms($post->ID, 'velou-service-type'); ?>
-
 						<div class="<?php foreach($terms as $term) {
 							echo ' ' . $term->slug; }?> filter-div item"
 							data-src="<?php echo get_the_post_thumbnail_url($post);?>">
-								<?php the_post_thumbnail('medium');?>
+							<?php the_post_thumbnail('medium');?>
 						</div>
 					<?php 
 					endwhile; ?>
@@ -74,8 +70,7 @@ get_header();
 		</section>
 	<?php
 	endwhile; // End of the loop.
-	?>
-		
+	?>		
 </main><!-- #main -->
 
 <?php

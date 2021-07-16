@@ -30,8 +30,7 @@ get_header();
 				</div>
 			</section>
 			
-			<section class="services accordion-container">
-				
+			<section class="services accordion-container">				
 				<?php 
 				$args = array(
 					'post_type'		=> 'velou-service',
@@ -40,21 +39,16 @@ get_header();
 					);
 
 				$query = new WP_Query ( $args );
-
 				if ( $query -> have_posts() ) { ?>
 					<?php
 
 					while ( $query->have_posts() ) : $query->the_post();
 						?> 
 						<article class="accordion-menu">
-
-							<button class="accordion-header"><h3><?php the_title();  ?></h3><span class="acc-icon"></span></button>
-							
+							<button class="accordion-header"><h3><?php the_title();  ?></h3><span class="acc-icon"></span></button>							
 							<div class="accordion-content">
-								<?php
-																
+								<?php																
 								if(function_exists('get_field')){
-
 									echo '<div class="intro">';									
 									$image = get_field('image');
 									$size = 'large'; 
@@ -63,36 +57,27 @@ get_header();
 										echo wp_get_attachment_image( $image, $size );
 										echo '</div>';
 									}
-
 									if(get_field('service_description')){?>
 										<p><?php the_field('service_description'); ?> </p>
 										<?php
 									}
-
 									echo '</div>';	
-
-									if( have_rows('service') ): ?>
-				
+									if( have_rows('service') ): ?>				
 										<table>
 										<caption> <?php the_title() ?> Prices</caption>
 										<tr>
 											<th>Name</th>
 											<th class="price-field">Price</th>
-										</tr>
-									
+										</tr>									
 										<?php while( have_rows('service') ): the_row(); ?>									
 											<tr>
 												<td><?php the_sub_field('service_name'); ?></td>
 												<td class="price-field"><?php the_sub_field('price'); ?></td>
 											</tr>											
-										<?php endwhile; ?>
-									
-										</table>
-										
+										<?php endwhile; ?>									
+										</table>										
 									<?php endif;
-								}?>
-									
-								
+								}?>								
 							</div>
 						</article>
 						<?php
@@ -102,7 +87,6 @@ get_header();
 				?>		
 			</section>
 
-			
 			<section class="cta">
 				<div class="inner-cta">	
 					<!-- Book Now CTA -->				
@@ -110,12 +94,10 @@ get_header();
 					<!-- FAQ CTA -->				
 					<a class="cta-hollow" href="<?php echo get_permalink(12); ?>">FAQ</a>				
 				</div>
-			</section>
-			
+			</section>			
 
 		<?php endwhile; // End of the loop.?>
 	</main><!-- #main -->
 
 <?php
-
 get_footer();

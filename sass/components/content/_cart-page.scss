@@ -1,7 +1,4 @@
 .page-id-17{
-    // .cta-book-now{
-    //     display: none;
-    // }
     .site-main{
         max-width: $max-width;
         margin: 0 auto;
@@ -64,7 +61,7 @@
                     margin: 0;
                     position: relative;
                     top: -1.5rem;
-                    right: -20%;
+                    
                 }
             }
         }
@@ -75,7 +72,6 @@
             background-color: $color__hover-focus;
             color: $color__button-text2;
             border: none;
-            // border-radius: 1.55em;
             font-family: $font__heading;
             &:hover{
                 background: $color__background-accent1;
@@ -131,7 +127,6 @@
             dd{
                 p{
                     padding: 0;
-                    right: -30%;
                 }
             }
             

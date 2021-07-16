@@ -6,7 +6,6 @@
         margin: 0rem;
         li{
             margin-right: 1rem;
-
             a {
                 svg{
                     width:2.5rem;
@@ -38,8 +37,7 @@
         margin: 4rem 0 2rem;
         li{
             vertical-align: text-top;
-            margin-right: .5rem;
-            
+            margin-right: .5rem;            
         }
         a{
             color: $color__text-main;
@@ -57,8 +55,3 @@
     
     }
 }
-
-@media screen and (min-width: $desktop){
-
-}
-

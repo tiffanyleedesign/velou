@@ -182,26 +182,22 @@ function velou_scripts() {
 			'gallery-filter',
 			get_template_directory_uri() .'/js/gallery-filter.js', array(), _S_VERSION, true
 		);
-
 	/*--- Lightbox ---*/
 	// Lightbox CSS 
 		wp_enqueue_style( 
 			'lightgallery-styles', get_template_directory_uri() .'/css/lightgallery.css', array(), _S_VERSION
 		);
-
 	// Lightbox code bundle
 		wp_enqueue_script( 
 			'lightgallery-scripts',
 			get_template_directory_uri() .'/js/lightgallery.min.js', array(), _S_VERSION, true
 		);
-
 	// Lightbox initial setting
 		wp_enqueue_script( 
 			'lightgallery-settings',
 			get_template_directory_uri() .'/js/lightgallery-settings.js', array('lightgallery-scripts'), _S_VERSION, true
 		);
 	}
-
 	//service page and faq page
 	if(is_page(array(106, 12))) {
 		wp_enqueue_script ( 'accordion-menu', get_template_directory_uri() . '/js/accordion.js', array(), _S_VERSION, true );
@@ -249,19 +245,6 @@ if ( class_exists( 'WooCommerce' ) ) {
 */
 require get_template_directory() . '/inc/cpt-taxonomy.php';
 
-
-// Changes the Block Editor to Classic Editor for some Pages
-
-// function velou_post_filter( $use_block_editor, $post ) {
-//     $page_ids = array( 2 );
-//     if ( in_array( $post->ID, $page_ids ) ) {
-//         return false;
-//     } else {
-//         return $use_block_editor;
-//     }
-// }
-// add_filter( 'use_block_editor_for_post', 'velou_post_filter', 10,  2 );
-
 // Method 1: Filter.
 function my_acf_google_map_api( $api ){
     $api['key'] = 'AIzaSyBikYKlwTBF1oqJoGwS0guUr_UJgIqA13Y';
@@ -282,7 +265,6 @@ function velou_excerpt_more( $more ){
 	return $more;
 }
 add_filter('excerpt_more', 'velou_excerpt_more');
-
 
 // -----------------------------------------------------
 // Home Page Widgets
@@ -340,10 +322,8 @@ HTML;
     echo $html;
 }
 
-function wpse_46445_make_link1($atts, $content = null) 
-{
+function wpse_46445_make_link1($atts, $content = null) {
 
-	// $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
     $yt    = "https://share.vidyard.com/watch/V3nWVnbedzUCmDMPauYtoh?{$atts['id']}";
     $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
     $html  = <<<HTML
@@ -362,9 +342,7 @@ function wpse_46445_make_link1($atts, $content = null)
 HTML;
     return $html;
 }
-function wpse_46445_make_link2($atts, $content = null) 
-{
-    // $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
+function wpse_46445_make_link2($atts, $content = null) {
     $yt    = "https://share.vidyard.com/watch/s7iw8ce4niHqg8aVMrGcHo?{$atts['id']}";
     $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
     $html  = <<<HTML
@@ -385,7 +363,6 @@ HTML;
 }
 function wpse_46445_make_link3($atts, $content = null) 
 {
-    // $img   = "http://i3.ytimg.com/vi/{$atts['id']}/default.jpg";
     $yt    = "https://share.vidyard.com/watch/vm1oBNGW2MtAEQVXg2ovz8?{$atts['id']}";
     $color = ($atts['color'] && $atts['color'] != '') ? ';color:' . $atts['color'] : '';
     $html  = <<<HTML
