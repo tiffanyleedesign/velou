@@ -1,7 +1,53 @@
+/****************** Components ****************/
 /* Navigation
 --------------------------------------------- */
 @import "navigation/navigation";
 
+/* Comments
+--------------------------------------------- */
+@import "comments/comments";
+
+/* Widgets
+--------------------------------------------- */
+@import "widgets/widgets";
+
+/* Media
+--------------------------------------------- */
+@import "media/media";
+
+/* Captions
+--------------------------------------------- */
+@import "media/captions";
+
+/* Galleries
+--------------------------------------------- */
+@import "media/galleries";
+
+/* Gallery - lightbox
+--------------------------------------------- */
+@import "media/lightbox";
+
+/* Accordion
+--------------------------------------------- */
+@import "accordion/accordion";
+
+/* Testimonials
+--------------------------------------------- */
+@import "testimonials/testimonials";
+
+/* Footer
+--------------------------------------------- */
+@import "footer/footer";
+
+/* Footer Navigation
+--------------------------------------------- */
+@import "footer/footer-nav";
+
+/* Brands Logo Section
+--------------------------------------------- */
+@import "brands-logo/brands";
+
+/****************** Pages *********************/
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
@@ -34,6 +80,10 @@
 --------------------------------------------- */
 @import "content/contact-page";
 
+/* Archive
+--------------------------------------------- */
+@import "content/archive";
+
 /* FAQ
 --------------------------------------------- */
 @import "content/faq-page";
@@ -46,7 +96,7 @@
 --------------------------------------------- */
 @import "content/404-page";
 
-
+/************* WooCommerce Payment ************/
 /* Booking Calendar
 --------------------------------------------- */
 @import "content/booking-calendar";
@@ -58,47 +108,3 @@
 /* Order received
 --------------------------------------------- */
 @import "content/order-received";
-
-/* Comments
---------------------------------------------- */
-@import "comments/comments";
-
-/* Widgets
---------------------------------------------- */
-@import "widgets/widgets";
-
-/* Media
---------------------------------------------- */
-@import "media/media";
-
-/* Captions
---------------------------------------------- */
-@import "media/captions";
-
-/* Galleries
---------------------------------------------- */
-@import "media/galleries";
-
-/* Galleries
---------------------------------------------- */
-@import "media/lightbox";
-
-/* Accordion
---------------------------------------------- */
-@import "accordion/accordion";
-
-/* Testimonials
---------------------------------------------- */
-@import "testimonials/testimonials";
-
-/* Footer
---------------------------------------------- */
-@import "footer/footer";
-
-/* Footer Navigation
---------------------------------------------- */
-@import "footer/footer-nav";
-
-/* Brands Logo Section
---------------------------------------------- */
-@import "brands-logo/brands";

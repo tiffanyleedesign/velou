@@ -36,7 +36,8 @@ get_header();
 						if (get_field('address')) {?>
 						<div class="col-left">
 							<div class="address velou-info">
-								<?php get_template_part('images/icon-location') ?>
+								<a href="#map">
+								<?php get_template_part('images/icon-location') ?></a>
 								<p><?php the_field('address'); ?> </p>
 							</div>
 						<?php
@@ -65,7 +66,7 @@ get_header();
 						<div class="col-right">
 							<div class="phone-email-wrapper">
 								<div class="phone velou-info">
-									<?php get_template_part('images/icon-phone') ?>
+									<a href="tel:604-111-1234"><?php get_template_part('images/icon-phone') ?></a>
 									<p><?php the_field('phone'); ?> </p>
 								</div><?php
 									
@@ -73,7 +74,7 @@ get_header();
 
 								if (get_field('email')) {?>
 								<div class="email velou-info">
-									<?php get_template_part('images/icon-email') ?>
+									<a href="mailto: info@velou.com?subject=Inquiry or Feedback&body= Message"><?php get_template_part('images/icon-email') ?></a>
 									<p><?php the_field('email'); ?> </p>
 								</div>
 							</div>
@@ -107,7 +108,7 @@ get_header();
 						<?php 
 						$location = get_field('map');
 						if( $location ): ?>
-							<div class="acf-map" data-zoom="14">
+							<div id="map" class="acf-map" data-zoom="14">
 								<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
 							</div>
 					<?php endif;								 		
